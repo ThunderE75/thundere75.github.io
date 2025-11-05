@@ -95,8 +95,6 @@ details.callout summary:focus-visible {
   border-radius: 4px;
 }
 
-
-
 .jumpto-button {
   display: inline-block;                /* keep inline anchors sized correctly */
   text-decoration: none;
@@ -128,7 +126,6 @@ details.callout summary:focus-visible {
 .jumpto-button:hover::before {
   transform: scale(1.5);
 }
-
 
 .jumpto-button:hover {
   color: var(--body-background-color);

@@ -2,6 +2,7 @@
 title = 'How to remove UEFI Partition from Windows'
 date = '2025-10-02T04:11:12+05:30'
 tags = ['windows', 'guide']
+description = 'Delete an unwanted EFI System Partition from Windows using Diskpart.'
 +++
 
 1. Launch `Diskpart` from the run prompt press {{< kbd "⊞ Win" >}} + {{< kbd "R" >}}

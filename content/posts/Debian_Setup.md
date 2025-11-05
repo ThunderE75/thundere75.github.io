@@ -3,6 +3,7 @@ date = '2025-09-30T21:30:11+05:30'
 title = 'My Debian Setup'
 featured = true
 tags= ['linux', 'guide']
+description = 'My go-to tools and commands to set up a fresh Debian/Ubuntu system.'
 +++
 
 This is how i like to setup a fresh install of Debian (Ubuntu) based distributions.

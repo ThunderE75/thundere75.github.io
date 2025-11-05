@@ -3,6 +3,7 @@ title = 'MPV Media Player Guide'
 date = '2025-10-02T19:43:38+05:30'
 featured = true
 tags = ['windows', 'guide', 'FOSS']
+description = 'How I customize MPV on Windows with scripts, keybinds, and UI tweaks.'
 +++
  This guide demonstrates how i setup my MPV will all the Configs, Scripts & Keybindings. 
 
