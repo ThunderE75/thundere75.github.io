@@ -1,32 +1,31 @@
 {{- define "main" -}}
-<section class="page-section"
-    style="display:flex;flex-direction:column;align-items:center;justify-content:flex-start;text-align:center;gap:1.5rem;min-height:50vh;">
-    <div>
-        <img src="/images/avatar.jpg" alt="Avatar"
-            style="width:160px;height:160px;object-fit:cover;border-radius:50%;box-shadow:0 2px 12px rgba(0,0,0,.15);"
-            loading="lazy" />
-    </div>
+<div class="socials-main">
+
+    <section class="page-section socials-page">
+        <div>
+            <img src="/images/avatar.jpg" alt="Avatar" class="socials-avatar" loading="lazy" />
+        </div>
     {{- with .Params.author -}}
-    <div style="display:flex;flex-direction:column;align-items:center;gap:.25rem;">
-        <div style="font-size:1.25rem;font-weight:600;">{{ . }}</div>
+    <div class="socials-author">
+        <div class="socials-author-name">{{ . }}</div>
         {{- with $.Params.alias -}}
-        <div style="opacity:.7;font-style:italic;">{{ . }}</div>
+        <div class="socials-alias">{{ . }}</div>
         {{- end -}}
     </div>
     {{- end -}}
-
+    
     {{- with .Params.social -}}
-    <nav aria-label="Social links"
-        style="display:flex;flex-direction:row;gap:1rem;flex-wrap:wrap;justify-content:center;align-items:center;">
+    <nav aria-label="Social links" class="socials-links">
         {{- range sort . "weight" -}}
         <a href="{{ .url }}" rel="me noopener noreferrer" target="_blank" aria-label="{{ .name }}" title="{{ .name }}"
-            style="display:inline-flex;align-items:center;justify-content:center;text-decoration:none;">
-            {{- with .icon -}}<i class="{{ . }}" aria-hidden="true" style="text-decoration:none;"></i>{{- end -}}
+        class="socials-link">
+            {{- with .icon -}}<i class="{{ . }}" aria-hidden="true"></i>{{- end -}}
         </a>
         {{- end -}}
     </nav>
     {{- end -}}
 </section>
+</div>
 {{- end -}}
 
 {{- define "side" -}}{{- end -}}

@@ -71,14 +71,14 @@ An adaptable and resilient upcoming master's graduate. Demonstrates strong commu
         <td><i>July 2023</i></td>
     </tr>
     <tr>
-        <td>Seasons Of Artificial Intelligence\*</td>
+        <td>Seasons Of Artificial Intelligence ⨳</td>
         <td>Microsoft Learn</td>
         <td align="center">{{<linkicon "https://drive.google.com/file/d/1WyQHx0-U0jYy6MGH2rcMIC-QulOijRNY/view?usp=sharing" "fa-solid fa-file-pdf" "PDF">}}</td>
         <td><i>October 2024</i></td>
     </tr>
 </table>
 
-> \* *Received the **AI Rocket Award** from Microsoft Learn for exceptional performance during the six-week **Seasons Of Artificial Intelligence** event*  
+> ⨳ *Received the **AI Rocket Award** from Microsoft Learn for exceptional performance during the six-week **Seasons Of Artificial Intelligence** event*  
 
 ## Education
 
@@ -114,4 +114,4 @@ An adaptable and resilient upcoming master's graduate. Demonstrates strong commu
 * Helped to organize **WOW2023’** by **Google Developer Student Club** (GDSC), Amity Lucknow, in **Babu Banarsi Das Institute of Technology** (BBDIT) on April 11, 2023\.  
 * Volunteered in **11th International Conference on Reliability, Infocom Technology And Optimization** (ICRITO), Organized by **IEEE**, hosted on March 15, 2024 in Amity University Noida, Uttar Pradesh.
 
-> View this Resume on  {{<linkicon "https://docs.google.com/document/d/1OcYeL7mQ3JaBc9r9kcoimTOJNUtiS2rEOb3KAE4tUrI/edit?usp=sharing" "fa-regular fa-file" "Google Docs">}}
+> View this Resume on  {{<linkicon "https://docs.google.com/document/d/1OcYeL7mQ3JaBc9r9kcoimTOJNUtiS2rEOb3KAE4tUrI/edit?usp=sharing" "fa-solid fa-file" "Google Docs">}}
