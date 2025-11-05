@@ -1,14 +1,15 @@
 <form onsubmit="searchBarSubmit(event)">
   <div class="search-bar">
     {{- partial "svg/search.svg" -}}
-      <input id="searchInput" type="text" placeholder="{{- i18n "search_placeholder" -}}"/>
+    <input id="searchInput" name="q" type="text" placeholder="{{- i18n " search_placeholder" -}}" />
   </div>
 </form>
 
 <script>
   function searchBarSubmit(event) {
     event.preventDefault();
-    const relativeUrl = `{{- absURL site.Params.lightning.searchPath -}}/?q=${encodeURIComponent(event.target.elements['searchInput'].value)}`;
+    const value = event.target.elements['q'] ? event.target.elements['q'].value : (document.getElementById('searchInput')?.value || '');
+    const relativeUrl = `{{- absURL site.Params.lightning.searchPath -}}/?q=${encodeURIComponent(value)}`;
     window.location.href = relativeUrl;
   }
 </script>

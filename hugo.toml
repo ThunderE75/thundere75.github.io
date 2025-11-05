@@ -5,6 +5,15 @@ siteBanner= 'images/banner.jpg'
 theme = 'lightning'
 enableEmoji = true
 
+[outputFormats.SearchIndex]
+  mediaType = "application/json"
+  baseName = "searchindex"
+  isPlainText = true
+  notAlternative = true
+
+[outputs]
+  home = ["HTML", "RSS", "SearchIndex"]
+
 [taxonomies]
   tag = 'tags'
   category = 'categories'

@@ -1,0 +1,16 @@
+[
+{{- $pages := where site.RegularPages "Params.indexable" "ne" false -}}
+{{- $last := sub (len $pages) 1 -}}
+{{- range $i, $p := $pages -}}
+  {
+    "id": {{ $i }},
+    "title": {{ $p.Title | jsonify }},
+    "tags": {{ $p.Params.tags | default (slice) | jsonify }},
+    "content": {{ ($p.Plain | truncate 1000) | jsonify }},
+    "summary": {{ $p.Summary | plainify | jsonify }},
+    "date": {{ $p.Date.Format "2006-01-02" | jsonify }},
+    "permalink": {{ $p.Permalink | jsonify }}
+  }{{ if lt $i $last }},{{ end }}
+{{- end -}}
+]
+
