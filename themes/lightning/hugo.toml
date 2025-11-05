@@ -45,7 +45,7 @@ title = 'My New Hugo Site'
 name = 'Navneet Prakash Dubey'
 [params.links]
  hugo = 'https://gohugo.io/'
- theme = 'https://github.com/ThunderE75/rusty-typewriter/'
+ theme = 'https://github.com/ThunderE75/hugo-lightning'
 
 [[menus.main]]
  name = 'Posts'

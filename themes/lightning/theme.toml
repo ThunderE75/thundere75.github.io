@@ -1,7 +1,7 @@
 name = 'lightning'
 license = 'MIT'
-licenselink = 'https://github.com/ThunderE75/rusty-typewriter/'
-description = 'A rusty hugo theme'
+licenselink = 'https://github.com/ThunderE75/hugo-lightning'
+description = 'A re-imagined hugo theme'
 
 homepage = 'https://github.com/ThunderE75/rusty-typewriter/'
 demosite = 'https://rusty-typewriter.netlify.app/demo'
