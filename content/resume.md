@@ -23,6 +23,26 @@ An adaptable and resilient upcoming master's graduate. Demonstrates strong commu
 * **Soft Skills:** Communication, Problem-solving, Adaptability, Resilience, Teamwork
 
 ---
+## Experience
+
+<table style="width:100%; border:0">
+    <tr style="border:0;"> 
+        <td style="border:0; padding-left:0"><h3 style="margin:0; font-size: 1.30em;">Krikalsoft</h3></td>
+        <td style="border:0; color:hsla(0, 0%, 53%, 0.95);" align="right">Jaipur, Rajasthan, India</td>
+    </tr>
+    <tr style="border:0; color:hsla(0, 0%, 53%, 0.98);"> 
+        <td style="border:0; padding-left:0">Frontend Developer</td>
+        <td style="border:0;" align="right">August 2025 - November 2025</td>
+    </tr>
+</table>
+
+<ul style="margin-top:0">
+    <li>Developed and maintained responsive user interfaces using modern front-end technologies to improve overall user experience and accessibility.</li>
+    <li>Collaborated with developers and designers to implement new features, fix UI bugs, and enhance application performance.</li>
+    <li>Optimized front-end components by improving code structure, reducing load times, and ensuring cross-browser compatibility.</li>
+</ul>
+
+---
 
 ## Projects
 ### NYX *(Discord Bot)* 
@@ -36,6 +56,8 @@ An adaptable and resilient upcoming master's graduate. Demonstrates strong commu
 - A Repository of all the Artificial Intelligence / Machine Learning models that I trained & the notes that I took during the Seasons of Artificial Intelligence event.  
 - Projects are based on implementation of AI/ML Concepts like Variational AutoEncoders (VAE), Convolutional Neural Networks (CNN), Generative Adversarial Networks (GAN), Natural Language Processing (NLP), Image Classifiers, etc.  
 - {{<linkicon "https://github.com/ThunderE75/Seasons-of-AI" "fa-brands fa-github" "Source Code">}}
+
+---
 
 ## Certificates
 
