@@ -4,6 +4,21 @@
 <title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ printf "%s | %s" .Title site.Title }}{{ end }}</title>
 <link rel="icon" href="/favicon.svg" sizes="any" type="image/svg+xml" />
 
+{{/* --- CUSTOM OG + TWITTER IMAGE LOGIC --- */}}
+{{ $image := "" }}
+{{ if .Params.image }}
+    {{ $image = .Params.image }}
+{{ else if .Site.Params.defaultImage }}
+    {{ $image = .Site.Params.defaultImage }}
+{{ end }}
+
+{{ if $image }}
+<meta property="og:image" content="{{ $image }}">
+<meta name="twitter:image" content="{{ $image }}">
+<meta name="twitter:card" content="summary_large_image">
+{{ end }}
+{{/* ---------------------------------------- */}}
+
 {{- template "_internal/opengraph.html" . -}}
 {{- template "_internal/twitter_cards.html" . -}}
 

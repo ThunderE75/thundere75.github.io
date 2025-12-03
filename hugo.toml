@@ -18,6 +18,9 @@ enableEmoji = true
   tag = 'tags'
   category = 'categories'
 
+[params]
+  defaultImage = "/images/favicon.svg"
+
 [params.lightning]
   sidePane = true
   countPageItems = 7

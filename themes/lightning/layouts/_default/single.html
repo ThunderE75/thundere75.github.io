@@ -11,6 +11,12 @@
     {{- partial "components/tags.html" . -}}
   </div>
   <section class="page-section">
+    {{/*  for OG Cover Image  */}}
+    {{/*  {{ if .Params.image }}
+      <div class="post-cover">
+        <img src="{{ .Params.image }}" alt="{{ .Title }} cover image">
+      </div>
+    {{ end }}  */}}
     {{- .Content -}}
   </section>
 {{- end -}}

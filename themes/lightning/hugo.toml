@@ -40,6 +40,7 @@ title = 'My New Hugo Site'
 
 [params]
  summaryLength = 1
+ defaultImage = "/images/default-card.png"
 
 [params.author]
 name = 'Navneet Prakash Dubey'
