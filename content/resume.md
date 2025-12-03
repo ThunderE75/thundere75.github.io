@@ -28,7 +28,7 @@ An adaptable and resilient upcoming master's graduate. Demonstrates strong commu
 <table style="width:100%; border:0">
     <tr style="border:0;"> 
         <td style="border:0; padding-left:0"><h3 style="margin:0; font-size: 1.30em;">Krikalsoft</h3></td>
-        <td style="border:0; color:hsla(0, 0%, 53%, 0.95);" align="right">Jaipur, Rajasthan, India</td>
+        <td style="border:0;" align="right">Jaipur, Rajasthan, India</td>
     </tr>
     <tr style="border:0; color:hsla(0, 0%, 53%, 0.98);"> 
         <td style="border:0; padding-left:0">Frontend Developer</td>
@@ -119,13 +119,13 @@ An adaptable and resilient upcoming master's graduate. Demonstrates strong commu
     </tr> 
     <tr>
         <td align="center">{{< img src="../../images/st-johns-school.png" alt="St. John's School Logo" width="50px" >}}</td>
-        <td>Intermediate (ISE)<br><i>St. John’s School, Marhauli, Varanasi</i></td>
+        <td>Intermediate (ISC)<br><i>St. John’s School, Marhauli, Varanasi, Uttar Pradesh, India</i></td>
         <td align="center">-</td>
         <td align="center">2018-2020</td>
     </tr> 
     <tr>
         <td align="center">{{< img src="../../images/st-johns-school.png" alt="St. John's School Logo" width="50px" >}}</td>
-        <td>High School (ICSE)<br><i>St. John’s School, Marhauli, Varanasi</i></td>
+        <td>High School (ICSE)<br><i>St. John’s School, Marhauli, Varanasi, Uttar Pradesh, India</i></td>
         <td align="center">-</td>
         <td align="center">2016-2018</td>
     </tr>
