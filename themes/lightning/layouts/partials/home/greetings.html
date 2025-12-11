@@ -1,12 +1,33 @@
 {{- if site.Params.lightning.home.showBio -}}
-  <div class="centered-container">
-    {{- if site.Params.lightning.home.showAuthorImg -}}
-      <img style="border: var(--dim-color) 1px solid;border-radius:100%;" width="70px" src="{{- site.Data.lightning.content.home.image | default "images/profile.jpg" -}}"/>
-    {{- end -}}
-    {{/*  {{- if site.Params.lightning.home.showHomeBanner -}}
-      <img src="{{- site.Data.lightning.content.home.banner | default "images/profile.jpg" -}}"/>
-    {{- end -}}  */}}
-
+  <div class="home-bio">
+    <div>
+      <div style="display:flex;align-items:center;gap:3rem">
+      <div style="display: flex; align-items: flex-start; flex-direction: column; text-align: left;">
+        <h1 style="margin: 0;">Hi, i'm&nbsp{{- site.Params.lightning.home.authorName -}} 👋🏼</h1>
+        <p style="margin: 0;">{{- site.Params.lightning.home.subHeading -}}&nbsp;
+          {{- if site.Params.lightning.home.countryEmoji -}}
+          <span style="font-family: Twemoji Country Flags;">
+            {{- site.Params.lightning.home.countryEmoji -}}
+          </span>
+          {{- end -}} 
+          {{- if site.Params.lightning.home.currentOccupation -}}
+            <p style="margin: 0;">{{- site.Params.lightning.home.currentOccupation -}}&nbsp;<a href="{{- site.Params.lightning.home.companyURL -}}" target="_blank" rel="noopener noreferrer">
+                {{- site.Params.lightning.home.companyName -}}</a>
+            </p>
+          {{- end -}}
+          {{- partial "home/socials.html" -}}
+      </div>
+      
+      {{- if site.Params.lightning.home.showAuthorImg -}}
+      <img style="border: var(--dim-color) 1px solid;border-radius:100%; margin:0" width="180px" src="{{- site.Data.lightning.content.home.image | default "images/avatar.jpg" -}}"/>
+      {{- end -}}
+      </div>
+      {{- if site.Params.lightning.home.showHomeBanner -}}
+      <img src="{{- site.Data.lightning.content.home.banner | default "images/banner.png" -}}"/>
+      {{- end -}}
+      
+    </div>
+      
     <h1 class="margin-sm">{{- site.Data.lightning.content.home.greetings -}}</h1>
     <div class="dim" style="width:70%;margin:0 15%;">{{- site.Data.lightning.content.home.text -}}
     </div>

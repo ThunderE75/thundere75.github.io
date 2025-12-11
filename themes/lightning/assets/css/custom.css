@@ -2,6 +2,12 @@
 summary::-webkit-details-marker { display: none; }
 summary::marker { content: ""; }
 
+.home-bio {
+  text-align: center;
+  margin: 1rem auto;
+  width: fit-content;
+}
+
 /* Base callout */
 .callout {
   border-left: 4px solid;
@@ -143,4 +149,22 @@ details.callout summary:focus-visible {
   overflow: hidden;
   margin: none;
   border-radius: 8px;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+.project-card {
+  border: 1px solid var(--dim-color);
+  border-radius: 8px;
+  padding: 1rem;
+  background-color: var(--body-background-color);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.project-card h3{
+  padding: 0;
 }

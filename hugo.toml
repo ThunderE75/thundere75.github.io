@@ -26,14 +26,23 @@ enableEmoji = true
   countPageItems = 7
 
 [params.lightning.home]
-  showBio = false
-  showAuthorImg = false
+  showBio = true
+  showAuthorImg = true
   showHomeBanner = false
   sidePaneTags = true
   showFeatured = true
   showRecent = true
   hideRecentWhenFeatured = true
   countRecent = 5
+  authorName="Navneet"
+  authorFullName="Navneet Prakash Dubey"
+  username="Thunder"
+  subHeading="Computer Science Graduate from Varanasi, India"
+  countryEmoji="🇮🇳"
+  currentOccupation="Software Development Intern at"
+  companyName="KrikalSoft"
+  companyURL="https://krikal.in/"
+  showSocialLinks=true
 
 [params.lightning.side.home]
   sidePaneSticky = false
