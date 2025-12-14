@@ -167,6 +167,7 @@ details.callout summary:focus-visible {
 }
 .project-card h3{
   margin: 0;
+  color: var(--primary-color);
 }
 .project-card p{
   margin: 0.5rem 0 0.8rem 0;
