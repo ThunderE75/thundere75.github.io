@@ -1,0 +1,21 @@
+{{- $projectsPage := site.GetPage "/projects" -}}
+{{- if and $projectsPage $projectsPage.Params.project -}}
+<h2>Featured Projects</h2>
+<div class="projects-grid">
+    {{- range $projectsPage.Params.project -}}
+    <a href="{{- .url -}}" target="_blank" rel="noopener noreferrer" class="project-link">
+    <div class="project-card">
+        <h3>{{- .name -}}</h3>
+        <p>{{- .description -}}</p>
+        {{- if .tech -}}
+        <div>
+            {{- range .tech -}}
+            <span class="project-tech">{{- . -}}</span>
+            {{- end -}}
+        </div>
+        {{- end -}}
+    </div>
+    </a>
+    {{- end -}}
+</div>
+{{- end -}}

@@ -17,8 +17,10 @@
 
 :root[color-scheme^='light'] {
   --body-text-color: hsl(0, 0%, 13%);
+  --body-secondary-text-color: hsl(0, 0%, 13%);
   --body-background-color: hsl(50, 17%, 93%);
-  
+  --body-background-highlight-color:  hsl(50, 17%, 87%);
+
   --code-text-color: hsl(0, 0%, 13%);
   --code-background-color: hsl(0, 0%, 90%);
   
@@ -29,7 +31,9 @@
 
 :root[color-scheme^='dark'] {
   --body-text-color: hsl(50, 17%, 93%);
+  --body-secondary-text-color: hsl(50, 17%, 80%);
   --body-background-color: hsl(0, 0%, 7%);
+  --body-background-highlight-color: hsl(0, 0%, 3%);
   
   --code-text-color: hsl(50, 17%, 93%);
   --code-background-color: hsl(0, 3%, 19%);
