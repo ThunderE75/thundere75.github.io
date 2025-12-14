@@ -136,4 +136,4 @@ An adaptable and resilient upcoming master's graduate. Demonstrates strong commu
 * Helped to organize **WOW2023’** by **Google Developer Student Club** (GDSC), Amity Lucknow, in **Babu Banarsi Das Institute of Technology** (BBDIT) on April 11, 2023\.  
 * Volunteered in **11th International Conference on Reliability, Infocom Technology And Optimization** (ICRITO), Organized by **IEEE**, hosted on March 15, 2024 in Amity University Noida, Uttar Pradesh.
 
-> View this Resume on  {{<linkicon "https://docs.google.com/document/d/1OcYeL7mQ3JaBc9r9kcoimTOJNUtiS2rEOb3KAE4tUrI/edit?usp=sharing" "fa-solid fa-file" "Google Docs">}}
+> View this Resume on  {{<linkicon "https://docs.google.com/document/d/1OcYeL7mQ3JaBc9r9kcoimTOJNUtiS2rEOb3KAE4tUrI/edit?usp=sharing" "fa-solid fa-file" "Google Docs">}} or {{<linkicon "../../Resume Tech - Navneet Prakash Dubey.pdf" "fa-solid fa-download" "Download Resume">}}
