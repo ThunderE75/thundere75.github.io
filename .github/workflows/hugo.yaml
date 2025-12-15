@@ -78,6 +78,10 @@ jobs:
           restore-keys:
             hugo-
       - name: Build the site
+        env:
+          HUGO_PARAMS_DEPLOY_COMMIT: ${{ github.sha }}
+          HUGO_PARAMS_DEPLOY_REF: ${{ github.ref_name }}
+          HUGO_PARAMS_DEPLOY_TIME: ${{ github.run_started_at }}
         run: |
           hugo \
             --gc \
