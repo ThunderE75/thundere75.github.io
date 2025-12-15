@@ -13,7 +13,7 @@
     <a class="jumpto-button" target="_blank" href="../../Resume Tech - Navneet Prakash Dubey.pdf">Resume ➔</a>
     {{- range first 3 (sort $socials "weight") -}}
   <a href="{{ .url }}" rel="me noopener noreferrer" target="_blank" aria-label="{{ .name }}" title="{{ .name }}"
-    class="socials-link" style="font-size: 0.6rem;">
+    class="socials-link fancy-icon" style="font-size: 0.6rem;">
     {{- with .icon -}}<i class="{{ . }}" aria-hidden="true"></i>{{- end -}}
   </a>
   {{- end -}}

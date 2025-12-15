@@ -189,3 +189,9 @@ details.callout summary:focus-visible {
   padding: 0.5rem;
   margin-right: 8px;
 }
+.fancy-icon {
+  transition: transform 0.3s ease;
+}
+.fancy-icon:hover {
+  transform: rotate(-8deg);
+}

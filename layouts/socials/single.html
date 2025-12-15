@@ -18,7 +18,7 @@
     <nav aria-label="Social links" class="socials-links">
         {{- range sort . "weight" -}}
         <a href="{{ .url }}" rel="me noopener noreferrer" target="_blank" aria-label="{{ .name }}" title="{{ .name }}"
-        class="socials-link">
+        class="socials-link fancy-icon">
             {{- with .icon -}}<i class="{{ . }}" aria-hidden="true"></i>{{- end -}}
         </a>
         {{- end -}}
