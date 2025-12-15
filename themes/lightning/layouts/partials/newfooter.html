@@ -7,28 +7,42 @@
         Content licensed under
         <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC-NC-SA 4.0</a>
     </div>
-
     <div>
         Tech licensed under
         <a href="https://github.com/ThunderE75/thundere75.github.io/blob/main/LICENSE" target="_blank">GNU GPLv3</a>
     </div>
-
+    
     <div class="deploy-commit">
         {{ $commit := .Site.Params.deploy_commit | default "" }}
-
         {{ if $commit }}
-        <i class="fa-solid fa-code-commit" aria-hidden="true"></i>
-        <a href="https://github.com/ThunderE75/thundere75.github.io/commit/{{ $commit }}" target="_blank" rel="noopener"
+            <i class="fa-solid fa-code-commit" aria-hidden="true"></i>
+            <a href="https://github.com/ThunderE75/thundere75.github.io/commit/{{ $commit }}" target="_blank" rel="noopener"
             title="View deploy commit on GitHub">
             {{ slicestr $commit 0 7 }}
-        </a>
+            </a>
         {{ else }}
-        <i class="fa-solid fa-rectangle-beta" aria-hidden="true" title="Local / dirty build"></i>
-        <span class="local-build">
-            local build
-        </span>
+            <i class="fa-solid fa-asterisk" aria-hidden="true" title="Local / dirty build"></i><span class="local-build">Local</span>
         {{ end }}
     </div>
+    <div class="deploy-time">
+        {{ with .Site.Params.deploy_time }}
+            <i class="fa-regular fa-clock"></i>
+            {{ time . | time.Format "02 Jan 2006 · 15:04 UTC" }}
+        {{ else }}
+            <i class="fa-regular fa-clock"></i>
+            <span title="Not deployed via CI">
+                {{ now | time.Format "02 Jan 2006 15:04" }}
+            </span>
+        {{ end }}
+    </div>
+    <div>
+        <a href="#">
+            <i class="fa-solid fa-arrow-up"></i>
+            Scroll to top
+            <i class="fa-solid fa-arrow-up"></i>
+        </a>
+    </div>
+    
 
 
     {{/*

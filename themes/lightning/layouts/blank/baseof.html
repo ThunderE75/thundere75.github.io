@@ -14,11 +14,12 @@
         <main id="main-content">
           {{- .Content -}}
         </main>
-        <footer id="main-footer">
+        {{/*  <footer id="main-footer">
           {{- partial "footer.html" . -}}
-        </footer>
+        </footer>  */}}
       </div>
     </div>
+    {{- partial "newfooter.html" . -}}
   </div>
 </body>
 </html>
