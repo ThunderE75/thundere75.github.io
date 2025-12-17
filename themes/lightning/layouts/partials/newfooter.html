@@ -13,10 +13,12 @@
     </div>
 
     <div class="deploy-commit">
-        {{/* Debug: show raw params in HTML comments to see what Hugo gets in CI */}}
-        <!-- debug deploy_commit="{{ .Site.Params.deploy_commit }}" deploy_ref="{{ .Site.Params.deploy_ref }}" deploy_time="{{ .Site.Params.deploy_time }}" -->
+        {{/* Debug: show what Hugo sees from both params and env vars */}}
+        <!-- debug deploy_commit_param="{{ .Site.Params.deploy_commit }}" deploy_ref_param="{{ .Site.Params.deploy_ref }}" deploy_time_param="{{ .Site.Params.deploy_time }}" -->
+        <!-- debug deploy_commit_env="{{ getenv "HUGO_PARAMS_DEPLOY_COMMIT" }}" deploy_ref_env="{{ getenv "HUGO_PARAMS_DEPLOY_REF" }}" deploy_time_env="{{ getenv "HUGO_PARAMS_DEPLOY_TIME" }}" -->
 
-        {{ $commit := .Site.Params.deploy_commit | default "" }}
+        {{/* Prefer config params, but fall back to raw CI env vars if params are empty */}}
+        {{ $commit := or .Site.Params.deploy_commit (getenv "HUGO_PARAMS_DEPLOY_COMMIT") }}
         {{ if $commit }}
         <i class="fa-solid fa-code-commit" aria-hidden="true"></i>
         <a href="https://github.com/ThunderE75/thundere75.github.io/commit/{{ $commit }}" target="_blank" rel="noopener"
@@ -29,10 +31,12 @@
         {{ end }}
     </div>
     <div class="deploy-time">
-        {{ with .Site.Params.deploy_time }}
+        {{/* Same: prefer param, fall back to env var, finally "local" now() */}}
+        {{ $deployTime := or .Site.Params.deploy_time (getenv "HUGO_PARAMS_DEPLOY_TIME") }}
+        {{ if $deployTime }}
         <i class="fa-regular fa-clock"></i>
-        <time datetime="{{ . }}">
-            {{ . | time.Format "02 Jan 2006 15:04" }}
+        <time datetime="{{ $deployTime }}">
+            {{ $deployTime | time.Format "02 Jan 2006 15:04" }}
         </time>
         {{ else }}
         <i class="fa-regular fa-clock"></i>
