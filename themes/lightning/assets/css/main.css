@@ -3,7 +3,7 @@ body {
   font-family: sans-serif;
   line-height: 1.5;
   margin: 0;
-  max-width: none;
+  width: clamp(300px, 90%, 900px);
 }
 
 header {
@@ -16,7 +16,7 @@ footer {
   margin-top: 1rem;
 } */
 p{
-  text-align: justify;
+  text-align:start ;
 }
 
 a {

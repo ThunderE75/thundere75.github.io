@@ -4,7 +4,7 @@
       <div style="display:flex;align-items:center;gap:3rem">
       <div style="display: flex; align-items: flex-start; flex-direction: column; text-align: left;">
         <h1 style="margin: 0;">Hi, i'm&nbsp{{- site.Params.lightning.home.authorName -}} 👋🏼</h1>
-        <p style="margin: 0;">{{- site.Params.lightning.home.subHeading -}}&nbsp;
+        <p style="margin: 0; ">{{- site.Params.lightning.home.subHeading -}}&nbsp;
           {{- if site.Params.lightning.home.countryEmoji -}}
           <span style="font-family: Twemoji Country Flags;">
             {{- site.Params.lightning.home.countryEmoji -}}
@@ -23,7 +23,7 @@
       {{- end -}}
       </div>
       {{- if site.Params.lightning.home.showHomeBanner -}}
-      <img src="{{- site.Data.lightning.content.home.banner | default "images/banner.png" -}}"/>
+        <img src="{{- site.Data.lightning.content.home.banner | default "images/banner.png" -}}"/>
       {{- end -}}
       
     </div>

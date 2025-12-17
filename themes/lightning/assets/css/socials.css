@@ -48,6 +48,14 @@
     justify-content: center;
     align-items: center;
 }
+.socials-links-icons {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
 
 .socials-link {
     display: inline-flex;

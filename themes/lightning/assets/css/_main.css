@@ -41,6 +41,7 @@ div#container {
   min-height: 100vh;
   max-width: fit-content;
   margin: 0 auto;
+  padding-left: 0.7em;
 }
 
 div#main-pane {
