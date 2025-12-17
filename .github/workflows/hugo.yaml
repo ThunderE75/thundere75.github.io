@@ -23,9 +23,6 @@ jobs:
       HUGO_VERSION: 0.151.0
       NODE_VERSION: 22.18.0
       TZ: Europe/Oslo
-      HUGO_PARAMS_DEPLOY_COMMIT: ${{ github.sha }}
-      HUGO_PARAMS_DEPLOY_TIME: ${{ github.run_started_at }}
-      HUGO_PARAMS_DEPLOY_REF: ${{ github.ref_name }}
     steps:
       - name: Checkout
         uses: actions/checkout@v5
@@ -53,12 +50,16 @@ jobs:
           tar -C "${HOME}/.local" -xf "dart-sass-${DART_SASS_VERSION}-linux-x64.tar.gz"
           rm "dart-sass-${DART_SASS_VERSION}-linux-x64.tar.gz"
           echo "${HOME}/.local/dart-sass" >> "${GITHUB_PATH}"
+      - name: Export deploy metadata
+        run: |
+          echo "HUGO_PARAMS_DEPLOY_COMMIT=${GITHUB_SHA}" >> $GITHUB_ENV
+          echo "HUGO_PARAMS_DEPLOY_REF=${GITHUB_REF_NAME}" >> $GITHUB_ENV
+          echo "HUGO_PARAMS_DEPLOY_TIME=${GITHUB_RUN_STARTED_AT}" >> $GITHUB_ENV
       - name: Debug deploy metadata
         run: |
           echo "SHA=$HUGO_PARAMS_DEPLOY_COMMIT"
           echo "TIME=$HUGO_PARAMS_DEPLOY_TIME"
           echo "REF=$HUGO_PARAMS_DEPLOY_REF"
-
       - name: Install Hugo
         run: |
           curl -sLJO "https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.tar.gz"
