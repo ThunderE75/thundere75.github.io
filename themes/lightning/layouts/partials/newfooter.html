@@ -1,17 +1,17 @@
 <div class="new-footer">
-    <div>
+    <div class="footer-copyright">
         © 2025 - {{ now.Year }} <a href="/socials">Navneet Prakash Dubey</a>
     </div>
-    <div>
+    <div class="footer-content-license">
         Content licensed under
         <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC-NC-SA 4.0</a>
     </div>
-    <div>
+    <div class="footer-tech-license">
         Tech licensed under
         <a href="https://github.com/ThunderE75/thundere75.github.io/blob/main/LICENSE" target="_blank">GNU GPLv3</a>
     </div>
     {{ if .Site.Params.lightning.footerCommitAndTime }}
-        <div class="deploy-commit">
+        <div class="deploy-commit footer-commit">
             {{ $commit := or .Site.Params.deploy_commit (getenv "HUGO_PARAMS_DEPLOY_COMMIT") }}
             {{ if $commit }}
                 <i class="fa-solid fa-code-commit" aria-hidden="true"></i>
@@ -25,7 +25,7 @@
                 <span class="local-build">Local</span>
             {{ end }}
         </div>
-        <div class="deploy-time">
+        <div class="deploy-time footer-time">
             {{ $deployTime := or .Site.Params.deploy_time (getenv "HUGO_PARAMS_DEPLOY_TIME") }}
             {{ if $deployTime }}
                 <i class="fa-regular fa-clock"></i>
@@ -41,21 +41,21 @@
         </div>
     {{ end }}
     
+    {{ if .Site.Params.lightning.footerPoweredBy }}
+    <div class="footer-powered">
+        {{- $ThemeAnchor := .Site.Params.links.theme | printf "<a href=\"%s\" target=\"_blank\">Lightning</a>" -}}
+        {{- $HugoAnchor := .Site.Params.links.hugo | printf "<a href=\"%s\" target=\"_blank\">Hugo</a>" -}}
+        {{- i18n "footer" (dict "ThemeAnchor" $ThemeAnchor "HugoAnchor" $HugoAnchor) | safeHTML -}}
+    </div>
+    {{ end }}
+
     {{ if .Site.Params.lightning.footerScrollToTop }}
-    <div>
+    <div class="footer-scroll-top">
         <a href="#">
             <i class="fa-solid fa-arrow-up"></i>
             Scroll to top
             <i class="fa-solid fa-arrow-up"></i>
         </a>
-    </div>
-    {{ end }}
-
-    {{ if .Site.Params.lightning.footerPoweredBy }}
-    <div>
-        {{- $ThemeAnchor := .Site.Params.links.theme | printf "<a href=\"%s\" target=\"_blank\">Lightning</a>" -}}
-        {{- $HugoAnchor := .Site.Params.links.hugo | printf "<a href=\"%s\" target=\"_blank\">Hugo</a>" -}}
-        {{- i18n "footer" (dict "ThemeAnchor" $ThemeAnchor "HugoAnchor" $HugoAnchor) | safeHTML -}}
     </div>
     {{ end }}
     

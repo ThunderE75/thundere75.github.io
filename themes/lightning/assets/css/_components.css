@@ -35,30 +35,111 @@
   font-size: .7rem;
 }
 
-.footer {
-  width: fit-content;
-  margin: 0 auto;
-  padding: .8rem 2rem;
-  text-align: center;
-  font-size: .7rem;
+/* @media (max-width: 768px) {
+  .new-footer {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+    padding: 1rem 0;
+    font-size: 0.75rem;
+  }
+
+  .new-footer > div {
+    text-align: center;
+  }
+} */
+
+@media (max-width: 768px) {
+
+  /* .new-footer {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr;
+    grid-template-areas:
+      "copyright content commit"
+      "copyright tech    time"
+      "powered   powered powered"
+      "scroll    scroll  scroll";
+    gap: 0.75rem;
+    padding: 1rem 0;
+    text-align: center;
+  } */
+  .new-footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "copyright copyright"
+      "content   content"
+      "tech      tech"
+      "powered   powered"
+      "scroll    scroll";
+    gap: 0.75rem;
+    padding: 1rem 0;
+    text-align: center;
+  }
+
+  .footer-copyright {
+    grid-area: copyright;
+  }
+
+  .footer-content-license {
+    grid-area: content;
+  }
+
+  .footer-tech-license {
+    grid-area: tech;
+  }
+
+  .footer-commit {
+    grid-area: commit;
+  }
+
+  .footer-time {
+    grid-area: time;
+  }
+
+  .footer-powered {
+    grid-area: powered;
+  }
+
+  .footer-scroll-top {
+    grid-area: scroll;
+  }
+
+  .footer-commit,
+  .footer-time {
+    display: none !important;
+  }
+
+  .new-footer>div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .footer-content-license,
+  .footer-tech-license {
+    flex-direction: row;   /* ← force inline */
+    gap: 0.25rem;
+    flex-wrap: wrap;       /* prevents overflow on small screens */
+  }
 }
 
 .footer-copyright {
-  margin: .8rem;
-  padding-top: .5rem;
-  border-top: 1px var(--dim-color) solid;
-}
-
-.footer-copyright-small {
-  font-size: .8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: unset;
+  padding-top: unset;
+  border-top: unset;
 }
 
 .flat-list-item {
   padding: .5rem;
-  border-top: 1px var(--dim-color) solid; 
+  border-top: 1px var(--dim-color) solid;
 }
 
-.flat-list-item > small {
+.flat-list-item>small {
   overflow: hidden;
   text-align: justify;
   display: -webkit-box;
@@ -66,7 +147,7 @@
   -webkit-box-orient: vertical;
 }
 
-.flat-list-item > small > p {
+.flat-list-item>small>p {
   font-family: var(--font-family-summary);
   font-weight: var(--font-weight-summary);
   margin: .25rem 0;
@@ -82,7 +163,7 @@
   margin-top: 1rem;
 }
 
-.list-group-heading > a {
+.list-group-heading>a {
   font-size: 1.1rem;
 }
 
@@ -102,20 +183,20 @@
   margin: 2rem auto;
 }
 
-.pagination > li {
+.pagination>li {
   display: inline;
   margin: .2rem;
 }
 
-.pagination > li:not(.disabled) > a {
+.pagination>li:not(.disabled)>a {
   text-decoration: underline;
 }
 
-.pagination > li.active > a {
+.pagination>li.active>a {
   color: var(--body-text-color);
 }
 
-.single-header > h1 {
+.single-header>h1 {
   margin: .5rem 0 0;
 }
 
@@ -127,7 +208,7 @@
   margin: .6rem 0 0 0;
 }
 
-.search-bar > input {
+.search-bar>input {
   flex-grow: 1;
   margin: 0 .5rem;
   color: var(--body-text-color);
@@ -135,7 +216,7 @@
   background-color: transparent;
 }
 
-.search-bar > input:focus {
+.search-bar>input:focus {
   outline: none;
 }
 
@@ -144,7 +225,7 @@
   font-size: .8rem;
 }
 
-.side-content > p {
+.side-content>p {
   font-family: var(--font-family-content);
   font-weight: var(--font-weight-content);
 }
@@ -165,15 +246,15 @@
   line-height: 1rem;
 }
 
-.taxonomy-list { 
+.taxonomy-list {
   display: flex;
   flex-wrap: wrap;
   list-style: none;
   padding-left: 0;
 }
 
-.details-taxonomy + .details-taxonomy:before {
-  content: ", "; 
+.details-taxonomy+.details-taxonomy:before {
+  content: ", ";
 }
 
 .breadcrumbs {
@@ -183,7 +264,7 @@
   list-style-type: none;
 }
 
-.breadcrumbs > li {
+.breadcrumbs>li {
   display: inline-block;
 }
 
@@ -200,8 +281,9 @@
   border: 1px var(--dim-color) solid;
   border-radius: 15px;
 }
+
 .tag:hover {
-  background: linear-gradient(131deg,var(--body-background-color) 0%, var(--body-background-highlight-color) 50%, var(--body-background-color) 100%);
+  background: linear-gradient(131deg, var(--body-background-color) 0%, var(--body-background-highlight-color) 50%, var(--body-background-color) 100%);
 }
 
 .search-result {
