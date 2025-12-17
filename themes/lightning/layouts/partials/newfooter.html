@@ -11,28 +11,34 @@
         Tech licensed under
         <a href="https://github.com/ThunderE75/thundere75.github.io/blob/main/LICENSE" target="_blank">GNU GPLv3</a>
     </div>
-    
+
     <div class="deploy-commit">
+        {{/* Debug: show raw params in HTML comments to see what Hugo gets in CI */}}
+        <!-- debug deploy_commit="{{ .Site.Params.deploy_commit }}" deploy_ref="{{ .Site.Params.deploy_ref }}" deploy_time="{{ .Site.Params.deploy_time }}" -->
+
         {{ $commit := .Site.Params.deploy_commit | default "" }}
         {{ if $commit }}
-            <i class="fa-solid fa-code-commit" aria-hidden="true"></i>
-            <a href="https://github.com/ThunderE75/thundere75.github.io/commit/{{ $commit }}" target="_blank" rel="noopener"
+        <i class="fa-solid fa-code-commit" aria-hidden="true"></i>
+        <a href="https://github.com/ThunderE75/thundere75.github.io/commit/{{ $commit }}" target="_blank" rel="noopener"
             title="View deploy commit on GitHub">
             {{ slicestr $commit 0 7 }}
-            </a>
+        </a>
         {{ else }}
-            <i class="fa-solid fa-asterisk" aria-hidden="true" title="Local / dirty build"></i><span class="local-build">Local</span>
+        <i class="fa-solid fa-asterisk" aria-hidden="true" title="Local / dirty build"></i><span
+            class="local-build">Local</span>
         {{ end }}
     </div>
     <div class="deploy-time">
         {{ with .Site.Params.deploy_time }}
-            <i class="fa-regular fa-clock"></i>
-            {{ time . | time.Format "02 Jan 2006 · 15:04 UTC" }}
+        <i class="fa-regular fa-clock"></i>
+        <time datetime="{{ . }}">
+            {{ . | time.Format "02 Jan 2006 15:04" }}
+        </time>
         {{ else }}
-            <i class="fa-regular fa-clock"></i>
-            <span title="Not deployed via CI">
-                {{ now | time.Format "02 Jan 2006 15:04" }}
-            </span>
+        <i class="fa-regular fa-clock"></i>
+        <span title="Not deployed via CI">
+            {{ now | time.Format "02 Jan 2006 15:04" }}
+        </span>
         {{ end }}
     </div>
     <div>
@@ -42,7 +48,7 @@
             <i class="fa-solid fa-arrow-up"></i>
         </a>
     </div>
-    
+
 
 
     {{/*
