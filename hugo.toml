@@ -20,13 +20,6 @@ enableEmoji = true
 
 [params]
   defaultImage = "/images/favicon.svg"
-  # These are populated at build time from the GitHub Actions workflow
-  # via the environment variables:
-  #   HUGO_PARAMS_DEPLOY_COMMIT
-  #   HUGO_PARAMS_DEPLOY_REF
-  #   HUGO_PARAMS_DEPLOY_TIME
-  # Hugo only *overrides* existing params from env vars, it does not
-  # create new ones automatically, so they must exist here.
   deploy_commit = ""
   deploy_ref    = ""
   deploy_time   = ""
@@ -34,6 +27,9 @@ enableEmoji = true
 [params.lightning]
   sidePane = true
   countPageItems = 7
+  footerCommitAndTime=true
+  footerScrollToTop=true
+  footerPoweredBy=false
 
 [params.lightning.home]
   showBio = true

@@ -2,7 +2,6 @@
     <div>
         © 2025 - {{ now.Year }} <a href="/socials">Navneet Prakash Dubey</a>
     </div>
-
     <div>
         Content licensed under
         <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC-NC-SA 4.0</a>
@@ -11,40 +10,38 @@
         Tech licensed under
         <a href="https://github.com/ThunderE75/thundere75.github.io/blob/main/LICENSE" target="_blank">GNU GPLv3</a>
     </div>
-
-    <div class="deploy-commit">
-        {{/* Debug: show what Hugo sees from both params and env vars */}}
-        <!-- debug deploy_commit_param="{{ .Site.Params.deploy_commit }}" deploy_ref_param="{{ .Site.Params.deploy_ref }}" deploy_time_param="{{ .Site.Params.deploy_time }}" -->
-        <!-- debug deploy_commit_env="{{ getenv "HUGO_PARAMS_DEPLOY_COMMIT" }}" deploy_ref_env="{{ getenv "HUGO_PARAMS_DEPLOY_REF" }}" deploy_time_env="{{ getenv "HUGO_PARAMS_DEPLOY_TIME" }}" -->
-
-        {{/* Prefer config params, but fall back to raw CI env vars if params are empty */}}
-        {{ $commit := or .Site.Params.deploy_commit (getenv "HUGO_PARAMS_DEPLOY_COMMIT") }}
-        {{ if $commit }}
-        <i class="fa-solid fa-code-commit" aria-hidden="true"></i>
-        <a href="https://github.com/ThunderE75/thundere75.github.io/commit/{{ $commit }}" target="_blank" rel="noopener"
-            title="View deploy commit on GitHub">
-            {{ slicestr $commit 0 7 }}
-        </a>
-        {{ else }}
-        <i class="fa-solid fa-asterisk" aria-hidden="true" title="Local / dirty build"></i><span
-            class="local-build">Local</span>
-        {{ end }}
-    </div>
-    <div class="deploy-time">
-        {{/* Same: prefer param, fall back to env var, finally "local" now() */}}
-        {{ $deployTime := or .Site.Params.deploy_time (getenv "HUGO_PARAMS_DEPLOY_TIME") }}
-        {{ if $deployTime }}
-        <i class="fa-regular fa-clock"></i>
-        <time datetime="{{ $deployTime }}">
-            {{ $deployTime | time.Format "02 Jan 2006 15:04" }}
-        </time>
-        {{ else }}
-        <i class="fa-regular fa-clock"></i>
-        <span title="Not deployed via CI">
-            {{ now | time.Format "02 Jan 2006 15:04" }}
-        </span>
-        {{ end }}
-    </div>
+    {{ if .Site.Params.lightning.footerCommitAndTime }}
+        <div class="deploy-commit">
+            {{ $commit := or .Site.Params.deploy_commit (getenv "HUGO_PARAMS_DEPLOY_COMMIT") }}
+            {{ if $commit }}
+                <i class="fa-solid fa-code-commit" aria-hidden="true"></i>
+                <a href="https://github.com/ThunderE75/thundere75.github.io/commit/{{ $commit }}"
+                target="_blank" rel="noopener"
+                title="View deploy commit on GitHub">
+                    {{ slicestr $commit 0 7 }}
+                </a>
+            {{ else }}
+                <i class="fa-solid fa-asterisk" aria-hidden="true" title="Local / dirty build"></i>
+                <span class="local-build">Local</span>
+            {{ end }}
+        </div>
+        <div class="deploy-time">
+            {{ $deployTime := or .Site.Params.deploy_time (getenv "HUGO_PARAMS_DEPLOY_TIME") }}
+            {{ if $deployTime }}
+                <i class="fa-regular fa-clock"></i>
+                <time datetime="{{ $deployTime }}">
+                    {{ $deployTime | time.Format "02 Jan 2006 15:04 UTC" }}
+                </time>
+            {{ else }}
+                <i class="fa-regular fa-clock"></i>
+                <span title="Not deployed via CI">
+                    {{ now | time.Format "02 Jan 2006 15:04 UTC" }}
+                </span>
+            {{ end }}
+        </div>
+    {{ end }}
+    
+    {{ if .Site.Params.lightning.footerScrollToTop }}
     <div>
         <a href="#">
             <i class="fa-solid fa-arrow-up"></i>
@@ -52,14 +49,14 @@
             <i class="fa-solid fa-arrow-up"></i>
         </a>
     </div>
+    {{ end }}
 
-
-
-    {{/*
+    {{ if .Site.Params.lightning.footerPoweredBy }}
     <div>
         {{- $ThemeAnchor := .Site.Params.links.theme | printf "<a href=\"%s\" target=\"_blank\">Lightning</a>" -}}
         {{- $HugoAnchor := .Site.Params.links.hugo | printf "<a href=\"%s\" target=\"_blank\">Hugo</a>" -}}
         {{- i18n "footer" (dict "ThemeAnchor" $ThemeAnchor "HugoAnchor" $HugoAnchor) | safeHTML -}}
     </div>
-    */}}
+    {{ end }}
+    
 </div>

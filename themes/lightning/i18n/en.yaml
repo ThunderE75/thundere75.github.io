@@ -9,7 +9,7 @@ not_found_home_link: Go Home
 
 # Footer
 scroll_top: Scroll to Top
-footer: Made with ❤️ and powered by {{ .ThemeAnchor }} theme for {{ .HugoAnchor }}
+footer: Powered by {{ .ThemeAnchor }} theme for {{ .HugoAnchor }}
 
 # Home
 featured_posts: Featured Posts
