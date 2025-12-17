@@ -24,7 +24,7 @@ jobs:
       NODE_VERSION: 22.18.0
       TZ: Europe/Oslo
       HUGO_PARAMS_DEPLOY_COMMIT: ${{ github.sha }}
-      HUGO_PARAMS_DEPLOY_TIME: ${{ github.run_started_at }}
+      HUGO_PARAMS_DEPLOY_TIME: $GITHUB_RUN_STARTED_AT
       HUGO_PARAMS_DEPLOY_REF: ${{ github.ref_name }}
     steps:
       - name: Checkout
