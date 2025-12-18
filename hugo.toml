@@ -31,6 +31,17 @@ enableEmoji = true
   footerScrollToTop=true
   footerPoweredBy=false
 
+[params.lightning.info]
+  authorName="Navneet"
+  authorFullName="Navneet Prakash Dubey"
+  username="Thunder"
+  subHeading="Computer Science Graduate from Varanasi, India"
+  countryEmoji="🇮🇳"
+  currentOccupation="Software Development Intern at"
+  companyName="KrikalSoft"
+  companyURL="https://krikal.in/"
+  copyrightStartYear=2025
+
 [params.lightning.home]
   showBio = true
   showAuthorImg = true
@@ -40,14 +51,6 @@ enableEmoji = true
   showRecent = true
   hideRecentWhenFeatured = true
   countRecent = 5
-  authorName="Navneet"
-  authorFullName="Navneet Prakash Dubey"
-  username="Thunder"
-  subHeading="Computer Science Graduate from Varanasi, India"
-  countryEmoji="🇮🇳"
-  currentOccupation="Software Development Intern at"
-  companyName="KrikalSoft"
-  companyURL="https://krikal.in/"
   showSocialLinks=true
 
 [params.lightning.side.home]
