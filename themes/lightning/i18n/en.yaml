@@ -1,6 +1,7 @@
 # Root
 theme_light: Light Theme
 theme_dark: Dark Theme
+language: Language
 
 # Not found (404)
 not_found_title: Whoops, page not found!
@@ -10,11 +11,17 @@ not_found_home_link: Go Home
 # Footer
 scroll_top: Scroll to Top
 footer: Powered by {{ .ThemeAnchor }} theme for {{ .HugoAnchor }}
+footer_content_licensed_under: Content licensed under
+footer_tech_licensed_under: Tech licensed under
+footer_view_deploy_commit: View deploy commit on GitHub
+footer_local_build: Local
+footer_local_build_title: Local / dirty build
+footer_not_deployed_via_ci: Not deployed via CI
 
 # Home
 featured_posts: Featured Posts
 recent_posts: Recent Posts
-#
+
 # Search
 js_required: It's necessary to enable Javascript
 search_loading: Loading...
@@ -24,7 +31,16 @@ search_placeholder: Search...
 see_all: See all...
 
 # Page
+about: About
+posts: Posts
+resume: Resume
+socials: Socials
+
 breadcrumb_home: Home
+
+#Tags
+guide: Guide
+software: Software
 
 # SidePane for single pages
 details_words: words

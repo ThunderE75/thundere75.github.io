@@ -1,0 +1,37 @@
+{{- /* Language switcher (only shows when multilingual is enabled) */ -}}
+{{- if gt (len site.Languages) 1 -}}
+  {{- $page := . -}}
+
+  {{- /* Build lookup: lang -> relPermalink for current page translations (includes current page) */ -}}
+  {{- $pageLinks := dict -}}
+  {{- range $page.AllTranslations -}}
+    {{- $pageLinks = merge $pageLinks (dict .Language.Lang .RelPermalink) -}}
+  {{- end -}}
+
+  {{- /* Fallback: lang -> relPermalink for language home */ -}}
+  {{- $homeLinks := dict -}}
+  {{- range site.Home.AllTranslations -}}
+    {{- $homeLinks = merge $homeLinks (dict .Language.Lang .RelPermalink) -}}
+  {{- end -}}
+
+  <div class="nav-item lang-switcher" aria-label="{{ i18n "language" }}">
+    <span class="lang-label">{{ i18n "language" }}:</span>
+    {{- range site.Languages -}}
+      {{- $lang := .Lang -}}
+      {{- $url := (index $pageLinks $lang) | default (index $homeLinks $lang) -}}
+      {{- if $url -}}
+        <a
+          class="lang-link{{ if eq $lang site.Language.Lang }} active{{ end }}"
+          href="{{ $url }}"
+          hreflang="{{ $lang }}"
+          lang="{{ $lang }}"
+          rel="alternate"
+        >
+          {{- .LanguageName | default (upper $lang) -}}
+        </a>
+      {{- end -}}
+    {{- end -}}
+  </div>
+{{- end -}}
+
+

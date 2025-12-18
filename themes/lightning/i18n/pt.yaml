@@ -1,6 +1,7 @@
 # Root
 theme_light: Tema Claro
 theme_dark: Tema Escuro
+language: Idioma
 
 # Not found (404)
 not_found_title: Oops, página não encontrada!

@@ -1,7 +1,8 @@
 <div role="navigation" aria-label="Main">
   <div class="nav-left">
     <a href="{{- absURL "" -}}" style="color: inherit;">{{- site.Title -}}</a>
-    {{/*  <a href="{{- absURL "" -}}"><img width="90px" style="padding:none;margin:none;" src="{{- site.Data.lightning.content.home.banner | default "images/thunder_banner_dark.png" -}}"/></a>  */}}
+    {{/* <a href="{{- absURL "" -}}"><img width="90px" style="padding:none;margin:none;"
+        src="{{- site.Data.lightning.content.home.banner | default " images/thunder_banner_dark.png" -}}" /></a> */}}
   </div>
   <div class="nav-right">
     <div style="position:absolute;width:0px;height:0px;">
@@ -15,6 +16,7 @@
     <div id="nav-menu">
       {{- partial "menu.html" (dict "menuID" "main" "page" .) -}}
     </div>
+    {{- partial "language_switcher.html" . -}}
     <a id="theme-switcher" href="#">
       {{- partial "svg/sun.svg" -}}
       {{- partial "svg/moon.svg" -}}

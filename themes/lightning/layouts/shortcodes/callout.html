@@ -64,7 +64,7 @@
     </summary>
 
     <div class="callout-content">
-        {{ .Inner | markdownify }}
+        {{ $.Page.RenderString .Inner }}
     </div>
 </details>
 {{- else -}}
@@ -75,7 +75,7 @@
     </div>
 
     <div class="callout-content">
-        {{ .Inner | markdownify }}
+        {{ $.Page.RenderString .Inner }}
     </div>
 </div>
 {{- end -}}
