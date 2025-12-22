@@ -196,6 +196,9 @@
   color: var(--body-text-color);
 }
 
+.single-header {
+  padding-right: .7rem;
+}
 .single-header>h1 {
   margin: .5rem 0 0;
 }

@@ -39,9 +39,12 @@ div#container {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  max-width: fit-content;
+  /* Consistent page width across home, posts, resume, etc. */
+  max-width: 992px;
+  width: 95%;
   margin: 0 auto;
   padding-left: 0.7em;
+  padding-right: 0.7em;
 }
 
 div#main-pane {
@@ -50,7 +53,6 @@ div#main-pane {
   flex-direction: column;
   width: 768px;
   margin: 0 auto;
-  padding-right: 1em;
 }
 
 aside#side-pane {
@@ -180,6 +182,11 @@ td {
   padding: .2rem .5rem;
 }
 
+.code-block-wrapper {
+  position: relative;
+  overflow: visible;
+}
+
 pre:has(code) {
   display: grid;
   overflow-x: auto;
@@ -187,6 +194,30 @@ pre:has(code) {
   border-radius: .3rem;
   color: var(--code-text-color);
   background-color: var(--code-background-color) !important;
+  position: relative;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.copy-btn {
+  position: absolute;
+  top: -0.75rem;
+  right: 0.75rem;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  font-weight: 500;
+  font-family: 'JetBrains Mono', monospace;
+  background-color: var(--body-background-color);
+  color: var(--body-text-color);
+  border: 1px solid var(--dim-color);
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: background-color 200ms ease-in, color 200ms ease-in;
+}
+
+.copy-btn:hover {
+  background-color: var(--primary-color);
+  color: var(--body-background-color);
 }
 
 :not(pre)>code {
@@ -194,4 +225,5 @@ pre:has(code) {
   border-radius: .3rem;
   color: var(--code-text-color);
   background-color: var(--code-background-color) !important;
+  font-family: 'JetBrains Mono', monospace;
 }
