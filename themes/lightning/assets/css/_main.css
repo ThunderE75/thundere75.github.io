@@ -196,6 +196,7 @@ pre:has(code) {
   background-color: var(--code-background-color) !important;
   position: relative;
   font-family: 'JetBrains Mono', monospace;
+  scrollbar-color: grey transparent;
 }
 
 .copy-btn {

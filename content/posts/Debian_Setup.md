@@ -35,11 +35,8 @@ sudo apt install git curl exa zoxide ranger bat neovim fzf btop
 ```
 
 {{< callout type="info" title="Additional Steps Necessary" foldable=true collapsed=false >}}
-
 You need to perform additional commands to install the following packages
-
-- whyy {{% linkicon "https://github.com/jesseduffield/lazygit" "fa-brands fa-github" "lazygit" %}} no work
-
+- {{% linkicon "https://github.com/jesseduffield/lazygit" "fa-brands fa-github" "lazygit" %}}
 {{< /callout >}}
 
 - Add my `alias.sh` file to `.bashrc`, this adds some Quality of Life Aliases

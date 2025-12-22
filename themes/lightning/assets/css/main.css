@@ -10,17 +10,10 @@ header {
   border-bottom: 1px solid #222;
   margin-bottom: 1rem;
 }
-/* 
-footer {
-  border-top: 1px solid #222;
-  margin-top: 1rem;
-} */
 p{
   text-align:start ;
 }
-
 a {
-  /* color: #00e; */
   color: var(--primary-color);
   text-decoration: none;
 }
@@ -48,6 +41,5 @@ code {
   border-radius: 1px;
   color: var(--code-text-color);
   background-color: var(--code-background-color);
-  line-height: 1.2;           /* keeps it tight */
-  /* vertical-align: middle;      */    
+  line-height: 1.2; 
 }
