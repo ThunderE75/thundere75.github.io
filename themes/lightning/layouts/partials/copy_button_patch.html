@@ -6,26 +6,34 @@ document.addEventListener("DOMContentLoaded", () => {
     // Prevent duplicate buttons if Hugo shortcode already added one
     if (pre.querySelector(".copy-btn")) return;
 
+    // Wrap pre in a container if not already wrapped
+    let wrapper = pre.parentNode;
+    if (!wrapper.classList || !wrapper.classList.contains("code-block-wrapper")) {
+      wrapper = document.createElement("div");
+      wrapper.className = "code-block-wrapper";
+      pre.parentNode.insertBefore(wrapper, pre);
+      wrapper.appendChild(pre);
+    }
+
     // Create button
     const button = document.createElement("button");
     button.className = "copy-btn";
-    button.innerHTML = '<i class="fa-regular fa-copy"></i>';
+    button.innerHTML = 'Copy';
 
     // Add click-to-copy behavior
     button.addEventListener("click", () => {
       navigator.clipboard.writeText(codeBlock.textContent).then(() => {
-        button.innerHTML = '<i class="fa-solid fa-copy"></i>';
+        button.innerHTML = 'Copied';
         setTimeout(() => {
-          button.innerHTML = '<i class="fa-regular fa-copy"></i>';
+          button.innerHTML = 'Copy';
         }, 2000);
       });
     });
 
-    // Style container
-    pre.style.position = "relative";
+    wrapper.style.position = "relative";
 
-    // Insert button
-    pre.appendChild(button);
+    // Insert button into wrapper instead of pre
+    wrapper.appendChild(button);
   });
 });
 </script>
