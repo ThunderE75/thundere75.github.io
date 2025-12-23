@@ -9,6 +9,8 @@
   --font-weight-summary: 500;
 
   --dim-color: hsla(0, 0%, 53%, 0.267);
+  --accept-color: hsl(131, 100%, 62%);
+  --reject-color: hsl(0, 100%, 60%);
 
   --quote-text-color: hsl(0, 0%, 53%);
   /* --code-background-color: hsl(0, 3%, 19%); */

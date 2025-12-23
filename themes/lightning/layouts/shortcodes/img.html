@@ -7,7 +7,15 @@
 {{- $height := .Get "height" | default "auto" -}}
 
 <figure class="image-shortcode" style="text-align:center; margin:0;">
-  <img src="{{ $src }}" alt="{{ $alt }}" width="{{ $width }}" height="{{ $height }}" style="margin:0; display:inline-block;">
+  <img
+    src="{{ $src }}"
+    alt="{{ $alt }}"
+    width="{{ $width }}"
+    height="{{ $height }}"
+    class="image-lightbox-trigger"
+    data-caption="{{ $caption }}"
+    style="margin:0; display:inline-block; cursor: zoom-in;"
+  >
   
   {{- if or $caption $credit }}
   <figcaption style="font-size:0.9em; color:gray; margin-top:0.15em;">
