@@ -6,7 +6,7 @@
   {{- range first (default 5 site.Params.rtw_theme.params.home.countRecent) $items -}}
     <div class="flat-list-item">
       <div>
-        <a href="{{- .RelPermalink -}}" style="view-transition-name: blog-title-{{ .File.UniqueID }};">{{- .LinkTitle -}}</a>
+        <a href="{{- .RelPermalink -}}">{{- .LinkTitle -}}</a>
         <time class="text-sm dim" style="float: right;" datetime="2023-05-02T00:00:00Z">
           {{- dateFormat (or .Site.Params.dateFormat "January 2, 2006") .Date -}}
         </time>

@@ -37,21 +37,3 @@
     rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
     rel="stylesheet">
-
-<script>
-if (document.startViewTransition) {
-  document.addEventListener("click", (e) => {
-    const link = e.target.closest("a[href]");
-    if (!link) return;
-
-    const url = new URL(link.href);
-    if (url.origin !== location.origin) return;
-
-    e.preventDefault();
-
-    document.startViewTransition(() => {
-      window.location = link.href;
-    });
-  });
-}
-</script>
