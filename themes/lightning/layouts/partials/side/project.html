@@ -1,0 +1,80 @@
+{{- $currentPage := . -}}
+
+{{- /* Get project params from page - it's an array, so get first element */ -}}
+{{- $pageProject := false -}}
+{{- if $currentPage.Params.project -}}
+{{- $pageProject = index $currentPage.Params.project 0 -}}
+{{- end -}}
+
+{{- /* Get tech array from page params - it's an array of objects with label and url */ -}}
+{{- $pageTechArray := false -}}
+{{- /* Access project.tech safely - it's a separate array in params */ -}}
+{{- $paramValue := $currentPage.Param "project.tech" -}}
+{{- if $paramValue -}}
+{{- $pageTechArray = $paramValue -}}
+{{- end -}}
+
+<div class="project-sidebar">
+    {{- /* Project Action Links */ -}}
+    <div class="project-actions">
+        <p style="margin-bottom: 0;">Related Links</p>
+        {{- /* Source Code */ -}}
+        {{- if and $pageProject $pageProject.source -}}
+        {{- if and (ne $pageProject.source "0") (ne $pageProject.source "") -}}
+        <a href="{{- $pageProject.source -}}" target="_blank" rel="noopener noreferrer"
+            class="project-action-btn project-btn-source">
+            <i class="fa-brands fa-github" aria-hidden="true"></i>
+            <span>Source</span>
+        </a>
+        {{- end -}}
+        {{- end -}}
+
+        {{- /* Website */ -}}
+        {{- if and $pageProject $pageProject.website -}}
+        {{- if and (ne $pageProject.website "0") (ne $pageProject.website "") -}}
+        <a href="{{- $pageProject.website -}}" target="_blank" rel="noopener noreferrer"
+            class="project-action-btn project-btn-website">
+            <i class="fa-solid fa-globe" aria-hidden="true"></i>
+            <span>Website</span>
+        </a>
+        {{- end -}}
+        {{- end -}}
+
+        {{- /* Video */ -}}
+        {{- if and $pageProject $pageProject.demo -}}
+        {{- if and (ne $pageProject.demo "0") (ne $pageProject.demo "") -}}
+        <a href="{{- $pageProject.demo -}}" target="_blank" rel="noopener noreferrer"
+            class="project-action-btn project-btn-demo">
+            <i class="fa-solid fa-play" aria-hidden="true"></i>
+            <span>Video</span>
+        </a>
+        {{- end -}}
+        {{- end -}}
+    </div>
+
+    {{- /* Technology Links */ -}}
+    {{- if $pageTechArray -}}
+    {{- $validTech := slice -}}
+    {{- range $pageTechArray -}}
+    {{- if and .label (ne .label "") -}}
+    {{- $validTech = $validTech | append . -}}
+    {{- end -}}
+    {{- end -}}
+    {{- $validTech = first 9 $validTech -}}
+    {{- if $validTech -}}
+    <div class="project-tech-section">
+        <h3>Technology used:</h3>
+        <div class="project-tech-links">
+            {{- range $validTech -}}
+            {{- if and .url (ne .url "") -}}
+            <a href="{{- .url -}}" target="_blank" rel="noopener noreferrer" class="project-tech-link">{{- .label
+                -}}</a>
+            {{- else -}}
+            <span class="project-tech-link">{{- .label -}}</span>
+            {{- end -}}
+            {{- end -}}
+        </div>
+    </div>
+    {{- end -}}
+    {{- end -}}
+</div>

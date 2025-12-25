@@ -63,6 +63,7 @@ aside#side-pane {
   border: var(--dim-color) 1px solid;
   border-radius: 5px;
   padding-top: 5px;
+  margin-left: .7rem;
 }
 
 aside.side-sticky {

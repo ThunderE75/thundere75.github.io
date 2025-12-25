@@ -5,21 +5,19 @@ indexable = true
 author = "Navneet Prakash Dubey"
 
 [[params.project]]
-    website = 0
-    demo = 0
-    source = 0
-    backdrop = 0
-    page_header = 0
+    source = 'https://www.youtube.com/watch?v=rsoEipuwXiI&pp=ugUHEgVlbi1VU9IHCQlNCgGHKiGM7w%3D%3D'
+    website = 'https://www.youtube.com/watch?v=rsoEipuwXiI&pp=ugUHEgVlbi1VU9IHCQlNCgGHKiGM7w%3D%3D'
+    demo = 'https://www.youtube.com/watch?v=rsoEipuwXiI&pp=ugUHEgVlbi1VU9IHCQlNCgGHKiGM7w%3D%3D'
+    backdrop = ''
+    page_header = ''
 
 [[params.project.tech]]
-    tech_1 = 0
-    tech_1_link = 0
-    tech_2 = 0
-    tech_2_link = 0
-    tech_3 = 0
-    tech_3_link = 0
-    tech_4 = 0
-    tech_4_link = 0
+    label = 'Javascript'
+    url = 'https://www.youtube.com/watch?v=rsoEipuwXiI&pp=ugUHEgVlbi1VU9IHCQlNCgGHKiGM7w%3D%3D'
+
+[[params.project.tech]]
+    label = 'Typescript'
+    url = 'https://www.youtube.com/watch?v=rsoEipuwXiI&pp=ugUHEgVlbi1VU9IHCQlNCgGHKiGM7w%3D%3D'
 
 +++
 

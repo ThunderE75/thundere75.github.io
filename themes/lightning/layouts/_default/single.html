@@ -1,28 +1,29 @@
 {{- define "main" -}}
-  <div class="single-header">
-    {{- partial "components/breadcrumbs.html" . -}}
-    <h1>{{- partial "title.html" . -}}</h1>
-    {{- $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" -}}
-    {{- $dateHuman := .Date | time.Format ":date_long" -}}
-    <time class="dim" datetime="{{- $dateMachine -}}">{{- $dateHuman -}}</time>
-    {{/*  <span class="dim">  •  </span>   */}}
-    {{/*  <span class="dim">{{- .WordCount }} {{ i18n "details_words" -}}</span>   */}}
-    {{/*  <span class="dim">({{- div (len .RawContent) 1096 }} - {{ div (len .RawContent) 860 }} {{ i18n "details_read_time" -}})</span>  */}}
-    {{- partial "components/tags.html" . -}}
+<div class="single-header">
+  {{- partial "components/breadcrumbs.html" . -}}
+  <h1>{{- partial "title.html" . -}}</h1>
+  {{- $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" -}}
+  {{- $dateHuman := .Date | time.Format ":date_long" -}}
+  <time class="dim" datetime="{{- $dateMachine -}}">{{- $dateHuman -}}</time>
+  {{/* <span class="dim"> • </span> */}}
+  {{/* <span class="dim">{{- .WordCount }} {{ i18n "details_words" -}}</span> */}}
+  {{/* <span class="dim">({{- div (len .RawContent) 1096 }} - {{ div (len .RawContent) 860 }} {{ i18n
+    "details_read_time" -}})</span> */}}
+  {{- partial "components/tags.html" . -}}
+</div>
+<section class="page-section">
+  {{/* for OG Cover Image */}}
+  {{/* {{ if .Params.image }}
+  <div class="post-cover">
+    <img src="{{ .Params.image }}" alt="{{ .Title }} cover image">
   </div>
-  <section class="page-section">
-    {{/*  for OG Cover Image  */}}
-    {{/*  {{ if .Params.image }}
-      <div class="post-cover">
-        <img src="{{ .Params.image }}" alt="{{ .Title }} cover image">
-      </div>
-    {{ end }}  */}}
-    {{- .Content -}}
-  </section>
+  {{ end }} */}}
+  {{- .Content -}}
+</section>
 {{- end -}}
 
 {{- define "side" -}}
-  <aside id="side-pane" class="{{- cond site.Params.lightning.side.single.sidePaneSticky "side-sticky" "" -}}">
-    {{- partial "side/single.html" . -}} 
-  </aside>
+<aside id="side-pane" class="{{- cond site.Params.lightning.side.single.sidePaneSticky " side-sticky" "" -}}">
+  {{- partial "side/single.html" . -}}
+</aside>
 {{- end -}}
