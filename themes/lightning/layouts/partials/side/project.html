@@ -12,6 +12,9 @@
 {{- $paramValue := $currentPage.Param "project.tech" -}}
 {{- if $paramValue -}}
 {{- $pageTechArray = $paramValue -}}
+{{- else if and $pageProject $pageProject.tech -}}
+{{- /* Fallback: some content files nest tech inside the first params.project table */ -}}
+{{- $pageTechArray = $pageProject.tech -}}
 {{- end -}}
 
 <div class="project-sidebar">
@@ -46,7 +49,7 @@
         <a href="{{- $pageProject.demo -}}" target="_blank" rel="noopener noreferrer"
             class="project-action-btn project-btn-demo">
             <i class="fa-solid fa-play" aria-hidden="true"></i>
-            <span>Video</span>
+            <span>Demo Video</span>
         </a>
         {{- end -}}
         {{- end -}}

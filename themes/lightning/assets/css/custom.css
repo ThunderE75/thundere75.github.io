@@ -467,6 +467,7 @@ details.callout summary:focus-visible {
   border: 1px solid var(--dim-color);
   align-items: center;
   justify-content: space-between;
+  position: relative;
 }
 
 .yt-video-title {
@@ -490,6 +491,12 @@ details.callout summary:focus-visible {
   color: var(--body-secondary-text-color);
   text-decoration: none;
   word-break: break-all;
+}
+
+.yt-video-stretched-link {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
 }
 
 .yt-img-right {

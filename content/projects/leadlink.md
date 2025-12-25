@@ -1,7 +1,7 @@
 +++
 title = "LeadLink"
 type = "project"
-indexable = true
+indexable = false
 
 author = "Navneet Prakash Dubey"
 

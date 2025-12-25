@@ -1,7 +1,7 @@
 +++
-title = 'mediledger'
+title = 'MediLedger'
 type = "project"
-indexable = true
+indexable = false
 
 author = "Navneet Prakash Dubey"
 
@@ -22,3 +22,5 @@ author = "Navneet Prakash Dubey"
 
 
 +++
+
+Details will be updated shortly...

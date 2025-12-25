@@ -9,7 +9,7 @@ alias = "Thunder"
   description = "NYX was the first and only COD Mobile Statistics & Gunsmith Discord Bot, which also functioned as a multipurpose Discord bot. At its peak, it was active on over 1,200 servers and served more than 178,000 unique users."
   featured = true
   writeup = "/projects/nyx"
-  tech = ["Javascript", "NodeJS", "MongoDB"]
+  tech = ["Javascript", "NodeJS", "MongoDB", "DiscordJS"]
   url = "https://github.com/ThunderE75/nyx-master"
 
 [[params.project]]
