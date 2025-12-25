@@ -1,6 +1,11 @@
 /* Remove default summary marker */
-summary::-webkit-details-marker { display: none; }
-summary::marker { content: ""; }
+summary::-webkit-details-marker {
+  display: none;
+}
+
+summary::marker {
+  content: "";
+}
 
 .home-bio {
   text-align: center;
@@ -72,25 +77,91 @@ details.callout:not([open]) .toggle-icon {
 }
 
 details[open] .callout-content {
-  max-height: 1000px; /* enough for tall content */
+  max-height: 1000px;
+  /* enough for tall content */
   opacity: 1;
   transition: max-height 0.4s ease, opacity 0.3s ease;
 }
 
 /* Variant colors (tweak to fit your theme) */
-.callout-note      { border-color: #3b82f6; background: rgba(59,130,246,0.05); }   /* Blue */
-.callout-abstract  { border-color: #6366f1; background: rgba(99,102,241,0.05); }   /* Indigo */
-.callout-info      { border-color: #0ea5e9; background: rgba(14,165,233,0.05); }   /* Cyan */
-.callout-tip       { border-color: #a855f7; background: rgba(168,85,247,0.05); }   /* Purple */
-.callout-success   { border-color: #22c55e; background: rgba(34,197,94,0.05); }    /* Green */
-.callout-question  { border-color: #14b8a6; background: rgba(20,184,166,0.05); }   /* Teal */
-.callout-warning   { border-color: #f59e0b; background: rgba(245,158,11,0.05); }   /* Amber */
-.callout-failure   { border-color: #ef4444; background: rgba(239,68,68,0.05); }    /* Red */
-.callout-danger    { border-color: #b91c1c; background: rgba(185,28,28,0.06); }    /* Dark Red */
-.callout-bug       { border-color: #d946ef; background: rgba(217,70,239,0.06); }   /* Pink/Purple */
-.callout-example   { border-color: #2563eb; background: rgba(37,99,235,0.05); }    /* Blue */
-.callout-quote     { border-color: #6b7280; background: rgba(107,114,128,0.05); }  /* Gray */
-.callout-opinion   { border-color: #e879f9; background: rgba(232,121,249,0.06); }  /* Light Pink */
+.callout-note {
+  border-color: #3b82f6;
+  background: rgba(59, 130, 246, 0.05);
+}
+
+/* Blue */
+.callout-abstract {
+  border-color: #6366f1;
+  background: rgba(99, 102, 241, 0.05);
+}
+
+/* Indigo */
+.callout-info {
+  border-color: #0ea5e9;
+  background: rgba(14, 165, 233, 0.05);
+}
+
+/* Cyan */
+.callout-tip {
+  border-color: #a855f7;
+  background: rgba(168, 85, 247, 0.05);
+}
+
+/* Purple */
+.callout-success {
+  border-color: #22c55e;
+  background: rgba(34, 197, 94, 0.05);
+}
+
+/* Green */
+.callout-question {
+  border-color: #14b8a6;
+  background: rgba(20, 184, 166, 0.05);
+}
+
+/* Teal */
+.callout-warning {
+  border-color: #f59e0b;
+  background: rgba(245, 158, 11, 0.05);
+}
+
+/* Amber */
+.callout-failure {
+  border-color: #ef4444;
+  background: rgba(239, 68, 68, 0.05);
+}
+
+/* Red */
+.callout-danger {
+  border-color: #b91c1c;
+  background: rgba(185, 28, 28, 0.06);
+}
+
+/* Dark Red */
+.callout-bug {
+  border-color: #d946ef;
+  background: rgba(217, 70, 239, 0.06);
+}
+
+/* Pink/Purple */
+.callout-example {
+  border-color: #2563eb;
+  background: rgba(37, 99, 235, 0.05);
+}
+
+/* Blue */
+.callout-quote {
+  border-color: #6b7280;
+  background: rgba(107, 114, 128, 0.05);
+}
+
+/* Gray */
+.callout-opinion {
+  border-color: #e879f9;
+  background: rgba(232, 121, 249, 0.06);
+}
+
+/* Light Pink */
 
 /* Icon spacing */
 .callout-header i[aria-hidden="true"] {
@@ -106,7 +177,8 @@ details.callout summary:focus-visible {
 }
 
 .jumpto-button {
-  display: inline-block;                /* keep inline anchors sized correctly */
+  display: inline-block;
+  /* keep inline anchors sized correctly */
   text-decoration: none;
   cursor: pointer;
   position: relative;
@@ -117,8 +189,10 @@ details.callout summary:focus-visible {
   background-color: transparent;
   font-weight: 600;
   transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
-  overflow: hidden;                     /* clip pseudo-element inside border */
-  isolation: isolate;                   /* make z-index layering self-contained */
+  overflow: hidden;
+  /* clip pseudo-element inside border */
+  isolation: isolate;
+  /* make z-index layering self-contained */
 }
 
 .jumpto-button::before {
@@ -127,9 +201,11 @@ details.callout summary:focus-visible {
   inset: 0;
   border-radius: inherit;
   background-color: var(--primary-color);
-  transform: scale(0);                  /* use transform, not scale shorthand */
+  transform: scale(0);
+  /* use transform, not scale shorthand */
   transform-origin: center;
-  z-index: -1;                          /* stay behind text but inside clipping */
+  z-index: -1;
+  /* stay behind text but inside clipping */
   transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
@@ -197,6 +273,20 @@ details.callout summary:focus-visible {
   font-size: 0.8rem;
   padding: 0.5rem;
   margin-right: 8px;
+}
+
+.view-all-projects {
+  display: inline-block;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 600;
+  transition: opacity 0.2s ease;
+}
+
+.view-all-projects:hover {
+  opacity: 0.8;
+  text-decoration: underline;
 }
 
 .fancy-icon {

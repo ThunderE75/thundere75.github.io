@@ -1,9 +1,12 @@
 {{- $projectsPage := site.GetPage "/projects" -}}
 {{- if and $projectsPage $projectsPage.Params.project -}}
+{{- $featuredProjects := where $projectsPage.Params.project "featured" true -}}
+{{- if $featuredProjects -}}
 <h2>Featured Projects</h2>
+<a href="{{- $projectsPage.RelPermalink -}}" class="view-all-projects">More Projects</a>
 <div class="projects-grid">
-    {{- range $projectsPage.Params.project -}}
-    <a href="{{- .url -}}" target="_blank" rel="noopener noreferrer" class="project-link">
+    {{- range $featuredProjects -}}
+    <a href="{{- .writeup -}}" class="project-link">
     <div class="project-card">
         <h3>{{- .name -}}</h3>
         <p>{{- .description -}}</p>
@@ -18,4 +21,5 @@
     </a>
     {{- end -}}
 </div>
+{{- end -}}
 {{- end -}}
