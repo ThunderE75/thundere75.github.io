@@ -456,3 +456,53 @@ details.callout summary:focus-visible {
   color: var(--primary-color);
   background: linear-gradient(131deg, var(--body-background-color) 0%, var(--body-background-highlight-color) 50%, var(--body-background-color) 100%);
 }
+
+.yt-video-card {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  padding: 0.9rem 1rem;
+  border-radius: 12px;
+  background: #1b1b1b;
+  border: 1px solid var(--dim-color);
+  align-items: center;
+  justify-content: space-between;
+}
+
+.yt-video-title {
+  margin: 0 0 0.25rem;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.yt-video-desc {
+  margin: 0 0 0.6rem;
+  font-size: 0.9rem;
+  opacity: 0.85;
+  line-height: 1.4;
+}
+
+.yt-video-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.85rem;
+  color: var(--body-secondary-text-color);
+  text-decoration: none;
+  word-break: break-all;
+}
+
+.yt-img-right {
+  width: 16rem;
+  border-radius: 10px;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  margin: 0 !important;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .yt-video-card {
+    grid-template-columns: 1fr;
+  }
+}
