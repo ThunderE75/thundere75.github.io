@@ -520,6 +520,14 @@ details.callout summary:focus-visible {
 /* Mobile */
 @media (max-width: 768px) {
   .yt-video-card {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column !important;
+  }
+  .yt-img-right {
+    width: 100%;
+    border-radius: 10px;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    margin: 0 !important;
   }
 }
