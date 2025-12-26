@@ -1,35 +1,25 @@
 {{- if site.Params.lightning.home.showBio -}}
-  <div class="home-bio">
-    <div>
-      <div style="display:flex;align-items:center;gap:3rem">
-      <div style="display: flex; align-items: flex-start; flex-direction: column; text-align: left;">
-        <h1 style="margin: 0;">Hi, i'm&nbsp{{- site.Params.lightning.info.authorName -}} 👋🏼</h1>
-        <p style="margin: 0; ">{{- site.Params.lightning.info.subHeading -}}&nbsp;
-          {{- if site.Params.lightning.info.countryEmoji -}}
-          <span style="font-family: Twemoji Country Flags;">
-            {{- site.Params.lightning.info.countryEmoji -}}
-          </span>
-          {{- end -}} 
-          {{- if site.Params.lightning.info.currentOccupation -}}
-            <p style="margin: 0;">{{- site.Params.lightning.info.currentOccupation -}}&nbsp;<a href="{{- site.Params.lightning.info.companyURL -}}" target="_blank" rel="noopener noreferrer">
-                {{- site.Params.lightning.info.companyName -}}</a>
-            </p>
-          {{- end -}}
-          {{- partial "home/socials.html" -}}
-      </div>
-      
-      {{- if site.Params.lightning.home.showAuthorImg -}}
-      <img style="border: var(--dim-color) 1px solid;border-radius:100%; margin:0" width="180px" src="{{- site.Data.lightning.content.home.image | default "images/avatar.jpg" -}}"/>
+<div class="home-bio">
+  <div style="display: flex; align-items: flex-start; flex-direction: column; text-align: left;">
+    <h1 style="margin: 0;">Hi, i'm&nbsp{{- site.Params.lightning.info.authorName -}} 👋🏼</h1>
+    <p style="margin: 0; ">{{- site.Params.lightning.info.subHeading -}}&nbsp;
+      {{- if site.Params.lightning.info.countryEmoji -}}
+      <span style="font-family: Twemoji Country Flags;">
+        {{- site.Params.lightning.info.countryEmoji -}}
+      </span>
       {{- end -}}
-      </div>
-      {{- if site.Params.lightning.home.showHomeBanner -}}
-        <img src="{{- site.Data.lightning.content.home.banner | default "images/banner.png" -}}"/>
-      {{- end -}}
-      
-    </div>
-      
-    <h1 class="margin-sm">{{- site.Data.lightning.content.home.greetings -}}</h1>
-    <div class="dim" style="width:70%;margin:0 15%;">{{- site.Data.lightning.content.home.text -}}
-    </div>
+      {{- if site.Params.lightning.info.currentOccupation -}}
+    <p style="margin: 0;">{{- site.Params.lightning.info.currentOccupation -}}&nbsp;<a
+        href="{{- site.Params.lightning.info.companyURL -}}" target="_blank" rel="noopener noreferrer">
+        {{- site.Params.lightning.info.companyName -}}</a>
+    </p>
+    {{- end -}}
+    {{- partial "home/socials.html" -}}
   </div>
+
+  {{- if site.Params.lightning.home.showAuthorImg -}}
+  <img class="home-bio-img" src="{{- site.Data.lightning.content.home.image | default "images/avatar.jpg" -}}" />
+  {{- end -}}
+
+</div>
 {{- end -}}

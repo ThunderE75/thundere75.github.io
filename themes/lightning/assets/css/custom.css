@@ -8,9 +8,22 @@ summary::marker {
 }
 
 .home-bio {
-  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  justify-items: center;
+  align-items: center;
   margin: 1rem auto;
-  width: fit-content;
+  width: 100%;
+}
+
+.home-bio-img {
+  border: var(--dim-color) 1px solid !important;
+  border-radius: 100% !important;
+  margin: 0 !important;
+  width: 180px !important;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
 }
 
 /* Base callout */
@@ -365,14 +378,15 @@ details.callout summary:focus-visible {
   color: var(--reject-color);
 }
 
-.projects-header{
+.projects-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
+
 .projects-header a {
   margin: auto 1rem auto 0;
-  
+
 }
 
 /* Project Sidebar Styles */
@@ -523,6 +537,7 @@ details.callout summary:focus-visible {
     display: flex;
     flex-direction: column !important;
   }
+
   .yt-img-right {
     width: 100%;
     border-radius: 10px;
