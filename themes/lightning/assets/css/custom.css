@@ -365,6 +365,16 @@ details.callout summary:focus-visible {
   color: var(--reject-color);
 }
 
+.projects-header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.projects-header a {
+  margin: auto 1rem auto 0;
+  
+}
+
 /* Project Sidebar Styles */
 .project-sidebar {
   display: flex;

@@ -2,8 +2,10 @@
 {{- if and $projectsPage $projectsPage.Params.project -}}
 {{- $featuredProjects := where $projectsPage.Params.project "featured" true -}}
 {{- if $featuredProjects -}}
-<h2>Featured Projects</h2>
-<a href="{{- $projectsPage.RelPermalink -}}" class="view-all-projects">More Projects</a>
+<div class="projects-header">
+    <h2>Featured Projects</h2>
+    <a href="{{- $projectsPage.RelPermalink -}}" class="view-all-projects">View more ➔</a>
+</div>
 <div class="projects-grid">
     {{- range $featuredProjects -}}
     <a href="{{- .writeup -}}" class="project-link">
