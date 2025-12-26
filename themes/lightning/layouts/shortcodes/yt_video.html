@@ -1,0 +1,48 @@
+{{ $inputURL := .Get "url" }}
+{{ $desc := .Get "description" | default "" }}
+
+{{/* Normalize YouTube URL for oEmbed */}}
+{{ $videoURL := $inputURL }}
+
+{{ if in $inputURL "youtu.be" }}
+{{ $id := replaceRE "^.*youtu.be/([^?]+).*" "$1" $inputURL }}
+{{ $videoURL = printf "https://www.youtube.com/watch?v=%s" $id }}
+{{ else if in $inputURL "embed" }}
+{{ $id := replaceRE "^.*embed/([^?]+).*" "$1" $inputURL }}
+{{ $videoURL = printf "https://www.youtube.com/watch?v=%s" $id }}
+{{ end }}
+
+{{/* Fetch oEmbed using modern Hugo API */}}
+{{ $oembed := printf "https://www.youtube.com/oembed?url=%s&format=json" (urlquery $videoURL) }}
+{{ $remote := resources.GetRemote $oembed }}
+{{ if not $remote }}
+{{ errorf "Failed to fetch YouTube oEmbed for %s" $videoURL }}
+{{ end }}
+
+{{ $data := $remote | transform.Unmarshal }}
+
+<div class="yt-video-card">
+  <a href="{{ $videoURL }}" target="_blank" rel="noopener" class="yt-video-stretched-link"
+    aria-label="Open YouTube video"></a>
+
+  <div class="yt-video-left">
+    <h3 class="yt-video-title">
+      {{ $data.title }}
+    </h3>
+
+    {{ if $desc }}
+    <p class="yt-video-desc">{{ $desc }}</p>
+    {{ else }}
+    <p class="yt-video-desc">
+      Video by {{ $data.author_name }} on YouTube.
+    </p>
+    {{ end }}
+
+    <div class="yt-video-link">
+      <i class="fa-brands fa-youtube"></i>
+      <span>{{ $videoURL }}</span>
+    </div>
+  </div>
+
+  <img class="yt-img-right" src="{{ $data.thumbnail_url }}" alt="{{ $data.title }}" loading="lazy">
+</div>

@@ -1,0 +1,17 @@
+{{- define "main" -}}
+<h1>{{- partial "title.html" . -}}</h1>
+{{- .Content -}}
+{{- $visible := where .Pages "Params.indexable" "ne" false -}}
+{{- $pages := (.Paginate ($visible.GroupByDate "2006") site.Params.lightning.countPageItems) -}}
+    {{- range $pages.PageGroups -}}
+    <div class="list-group-key">{{- .Key -}}</div>
+        {{- range .Pages -}}
+        <div class="list-group-heading">
+        <a href="{{- .RelPermalink -}}">{{- partial "title.html" . -}}</a>
+
+        </div>
+        <div class="list-group-summary content-font">{{- partial "components/summary.html" . -}}</div>
+        {{- end -}}
+    {{- end -}}
+{{ template "_internal/pagination.html" . }}
+{{- end -}}
