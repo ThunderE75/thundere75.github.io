@@ -1,6 +1,6 @@
 +++
 indexable = true
-
+type = "project"
 author = "Navneet Prakash Dubey"
 alias = "Thunder"
 
