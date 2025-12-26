@@ -2,6 +2,7 @@
 title = "Nyx (Discord Bot)"
 type = "project"
 author = "Navneet Prakash Dubey"
+indexable = false
 
 [[params.project]]
     source = 'https://github.com/ThunderE75/nyx-master'
