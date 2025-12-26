@@ -1,7 +1,6 @@
 +++
 title = "Seasons of AI"
 type = "project"
-indexable = false
 
 author = "Navneet Prakash Dubey"
 

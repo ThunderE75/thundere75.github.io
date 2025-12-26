@@ -1,7 +1,6 @@
 +++
 title = "Nyx (Discord Bot)"
 type = "project"
-indexable = true
 author = "Navneet Prakash Dubey"
 
 [[params.project]]
@@ -9,7 +8,7 @@ author = "Navneet Prakash Dubey"
     website = ''
     demo = 'https://youtu.be/YSKDu1gKntY'
     backdrop = ''
-    page_header = ''
+    page_header = '/images/projects/nyx/nyx_banner_3d.png'
 
 [[params.project.tech]]
     label = 'Javascript'

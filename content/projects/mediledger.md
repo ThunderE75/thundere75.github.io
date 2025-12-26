@@ -1,7 +1,6 @@
 +++
 title = 'MediLedger'
 type = "project"
-indexable = false
 
 author = "Navneet Prakash Dubey"
 

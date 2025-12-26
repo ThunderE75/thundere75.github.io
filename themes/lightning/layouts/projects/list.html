@@ -1,0 +1,60 @@
+{{- define "main" -}}
+<h1>{{- partial "title.html" . -}}</h1>
+{{- .Content -}}
+
+{{- /* Prefer the current page (list page). Fallback to the projects section if needed. */ -}}
+{{- $projectsPage := . -}}
+{{- if not $projectsPage.Params.project -}}
+  {{- $projectsPage = site.GetPage "section" "projects" -}}
+{{- end -}}
+
+{{- /* Only render when we have project entries and indexable is not strictly false (default to true) */ -}}
+{{- $indexable := $projectsPage.Params.indexable | default true -}}
+{{- if and $projectsPage $projectsPage.Params.project $indexable -}}
+  {{- $projList := $projectsPage.Params.project -}}
+  {{- if not (reflect.IsSlice $projList) -}}
+    {{- $projList = slice $projList -}}
+  {{- end -}}
+<div class="projects-grid">
+  {{- range $idx, $proj := $projList -}}
+    {{- $projIndexable := $proj.indexable | default true -}}
+    {{- if $projIndexable -}}
+    {{- $writeup := $proj.writeup -}}
+    {{- $page := site.GetPage $writeup -}}
+    {{- $pageProj := false -}}
+    {{- if and $page $page.Params.project -}}
+      {{- if reflect.IsSlice $page.Params.project -}}
+        {{- $pageProj = index $page.Params.project 0 -}}
+      {{- else -}}
+        {{- $pageProj = $page.Params.project -}}
+      {{- end -}}
+    {{- end -}}
+    {{- $img := "" -}}
+    {{- if $pageProj -}}
+      {{- $img = (or $pageProj.page_header $pageProj.backdrop) -}}
+    {{- end -}}
+
+    <a href="{{- $writeup -}}" class="project-link">
+      <div class="project-card">
+        {{- if $img -}}
+        <div class="post-cover">
+          <img src="{{- $img -}}" alt="{{- $proj.name -}}">
+        </div>
+        {{- end -}}
+        <h3>{{- $proj.name -}}</h3>
+        <p>{{- $proj.description -}}</p>
+        {{- if $proj.tech -}}
+        <div>
+          {{- range $proj.tech -}}
+          <span class="project-tech">{{- . -}}</span>
+          {{- end -}}
+        </div>
+        {{- end -}}
+      </div>
+    </a>
+    {{- end -}}
+  {{- end -}}
+</div>
+{{- end -}}
+
+{{- end -}}
