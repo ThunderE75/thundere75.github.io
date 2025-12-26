@@ -487,11 +487,15 @@ details.callout summary:focus-visible {
   gap: 1rem;
   padding: 0.9rem 1rem;
   border-radius: 12px;
-  background: #1b1b1b;
+  background: var(--body-background-color);
   border: 1px solid var(--dim-color);
   align-items: center;
   justify-content: space-between;
   position: relative;
+}
+
+.yt-video-card:hover {
+  background-color: var(--body-background-highlight-color);
 }
 
 .yt-video-title {
