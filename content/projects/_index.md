@@ -1,4 +1,5 @@
 +++
+title = "Projects"
 indexable = true
 type = "project"
 author = "Navneet Prakash Dubey"
