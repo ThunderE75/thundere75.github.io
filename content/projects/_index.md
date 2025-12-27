@@ -20,7 +20,7 @@ alias = "Thunder"
   featured = true
   indexable = true
   writeup = "/projects/mediledger"
-  tech = ["Python", "StreamLit"]
+  tech = ["Research Paper","Python", "StreamLit"]
   url = "https://github.com/ThunderE75/MediLedger"
 
 [[params.project]]
