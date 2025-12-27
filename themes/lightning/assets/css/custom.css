@@ -396,6 +396,17 @@ details.callout summary:focus-visible {
   gap: 1rem;
 }
 
+.side-content-mobile{
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .side-content-mobile{
+    display: block;
+  }
+}
+
+
 .project-actions {
   display: flex;
   flex-direction: column;
@@ -520,6 +531,11 @@ details.callout summary:focus-visible {
   text-decoration: none;
   word-break: break-all;
 }
+.yt-video-link span {
+  text-wrap: nowrap;
+  text-overflow: ellipsis;
+}
+
 
 .yt-video-stretched-link {
   position: absolute;
