@@ -96,6 +96,18 @@ details[open] .callout-content {
   transition: max-height 0.4s ease, opacity 0.3s ease;
 }
 
+/* Make non-foldable (static) callouts always show their content */
+.callout-static .callout-content {
+  max-height: 1000px;
+  opacity: 1;
+  transition: max-height 0.4s ease, opacity 0.3s ease;
+}
+
+/* Ensure any toggle icon (if present) is hidden for static callouts */
+.callout-static .toggle-icon {
+  display: none;
+}
+
 /* Variant colors (tweak to fit your theme) */
 .callout-note {
   border-color: #3b82f6;

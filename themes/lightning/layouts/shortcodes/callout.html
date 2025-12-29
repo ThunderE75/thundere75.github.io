@@ -68,7 +68,7 @@
     </div>
 </details>
 {{- else -}}
-<div class="callout callout-{{ $type }}">
+<div class="callout callout-{{ $type }} callout-static">
     <div class="callout-header">
         {{- if $showIcon }}<i class="{{ index $icons $type }}" aria-hidden="true"></i>{{- end }}
         {{- if $showTitle }}<span class="callout-title">{{ $titleText }}</span>{{- end }}
