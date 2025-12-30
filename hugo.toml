@@ -39,6 +39,8 @@ enableEmoji = true
 
 [params.lightning]
   sidePane = true
+  showSharelinks = true
+  showReplyByMail = true
   countPageItems = 7
   footerCommitAndTime=true
   footerScrollToTop=true

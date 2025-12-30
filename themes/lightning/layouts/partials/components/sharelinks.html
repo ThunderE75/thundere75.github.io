@@ -1,0 +1,48 @@
+{{- $title := .Title -}}
+{{- $url := .Permalink -}}
+
+{{- $encodedTitle := $title | urlquery -}}
+{{- $encodedURL := $url | urlquery -}}
+
+{{- $emailBody := printf "Check out this post: %s\n%s" $title $url -}}
+
+<div class="sharelinks">
+    <div class="sharelinks-socials">
+        <span>Share this post on:</span>
+        <div>
+            <a href="https://x.com/intent/post?url={{ $encodedURL }}" target="_blank" rel="noopener noreferrer"
+                alt="Share this post on X">
+                <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
+            </a>
+            <a href="https://bsky.app/intent/compose?text={{ $encodedURL }}" target="_blank" rel="noopener noreferrer"
+                alt="Share this post on BlueSky">
+                <i class="fa-brands fa-bluesky" aria-hidden="true"></i>
+            </a>
+            <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ $encodedURL }}" target="_blank"
+                rel="noopener noreferrer" alt="Share this post on Linkedin">
+                <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+            </a>
+            <a href="https://wa.me/?text={{ $encodedURL }}" target="_blank" rel="noopener noreferrer"
+                alt="Share this post via WhatsApp">
+                <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+            </a>
+            <a href="https://www.facebook.com/sharer.php?u={{ $encodedURL }}" target="_blank" rel="noopener noreferrer"
+                alt="Share this post on Facebook">
+                <i class="fa-brands fa-square-facebook" aria-hidden="true"></i>
+            </a>
+            <a href="mailto:?subject=Check this out - {{ $title }}
+                    &amp;body={{ $emailBody }}">
+                <i class="fa-solid fa-envelope"></i>
+            </a>
+        </div>
+    </div>
+    {{- if site.Params.lightning.showReplyByMail -}}
+    <div>
+        <a href="mailto:navneet.dubey750+blog@gmail.com
+            ?subject=Reply: {{ $title }}">
+            <i class="fa-solid fa-reply"></i>
+            <span>Reply</span>
+        </a>
+    </div>
+    {{ end }}
+</div>

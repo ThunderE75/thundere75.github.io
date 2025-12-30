@@ -10,6 +10,7 @@
   {{/* <span class="dim">({{- div (len .RawContent) 1096 }} - {{ div (len .RawContent) 860 }} {{ i18n
     "details_read_time" -}})</span> */}}
   {{- partial "components/tags.html" . -}}
+  
 </div>
 <section class="page-section">
   {{/* for OG Cover Image */}}
@@ -20,7 +21,11 @@
   {{ end }} */}}
   {{- .Content -}}
 </section>
+{{- if site.Params.lightning.showSharelinks -}}
+  {{- partial "components/sharelinks" . -}}
 {{- end -}}
+{{- end -}}
+
 
 {{- define "side" -}}
 <aside id="side-pane" class="{{- cond site.Params.lightning.side.single.sidePaneSticky " side-sticky" "" -}}">
