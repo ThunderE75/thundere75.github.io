@@ -4,9 +4,9 @@ date = '2025-12-29T20:12:00+05:30'
 image = "/images/posts/revanced/og_revanced.jpg"
 featured = true
 tags = ['android', 'guide', 'FOSS']
-description = 'This guide walks you through the complete process of compiling YouTube ReVanced directly on an Android phone using ReVanced Manager. It also explains all the important settings and configuration options that should be reviewed or modified to ensure optimal functionality.'
+description = 'This guide walks you through the complete process of patching YouTube ReVanced directly on an Android phone using ReVanced Manager.'
 +++
-This guide demonstrates to compile Youtube ReVanced on Android Phone using ReVanced Manager & all the important settings that probably be changed. 
+This guide walks you through the complete process of patching YouTube ReVanced directly on an Android phone using ReVanced Manager. It also explains all the important settings and configuration options that should be reviewed or modified to ensure optimal functionality.
 
 {{< jumpto src="#instructions" label="Skip to Instructions" >}}
 
