@@ -7,7 +7,7 @@ summary::marker {
   content: "";
 }
 
-.home-bio {
+.home-bio-box {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -17,6 +17,13 @@ summary::marker {
   width: 100%;
 }
 
+.home-bio {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  text-align: left;
+}
+
 .home-bio-img {
   border: var(--dim-color) 1px solid !important;
   border-radius: 100% !important;
@@ -24,6 +31,33 @@ summary::marker {
   width: 180px !important;
   aspect-ratio: 1 / 1;
   object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .home-bio-box {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 1rem;
+  }
+
+  .home-bio p {
+    text-align: center;
+  }
+  .home-bio {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: left;
+  }
+
+  .home-bio-img {
+    border: var(--dim-color) 1px solid !important;
+    border-radius: 100% !important;
+    margin: 0 !important;
+    width: 180px !important;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+  }
 }
 
 /* Base callout */
