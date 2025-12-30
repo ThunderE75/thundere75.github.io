@@ -1,7 +1,7 @@
 +++
 title = 'MPV Media Player Guide'
 date = '2025-10-02T19:43:38+05:30'
-image = "/images/posts/mpv_blog.jpg"
+image = "/images/posts/mpv/mpv_blog.jpg"
 featured = true
 tags = ['windows', 'guide', 'FOSS']
 description = 'How I customize MPV on Windows with scripts, keybinds, and UI tweaks.'
@@ -28,7 +28,7 @@ MPV itself is great, but the ecosystem around it makes it even more exciting:
 
 ## Showcase
 
-{{< img src="../../images/posts/mpv_showcase.png" alt="MPV UI Showcase" caption="MPV customization showcase" >}}
+{{< img src="../../images/posts/mpv/mpv_showcase.png" alt="MPV UI Showcase" caption="MPV customization showcase" >}}
 
 ## Script Breakdown
 
