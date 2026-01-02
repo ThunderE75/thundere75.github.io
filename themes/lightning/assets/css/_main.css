@@ -71,8 +71,24 @@ aside.side-sticky {
 }
 
 header#main-header {
-  /* margin-bottom: 4rem; */
   border-bottom: 1px var(--dim-color) solid;
+}
+header .skip{ 
+  color: var(--accessible-color);
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  margin-right: 0.5rem;
+  padding: 0.3rem;
+}
+
+header .skip:focus {
+  position: static;
+  width: auto;
+  height: auto;
 }
 
 div#nav-menu {

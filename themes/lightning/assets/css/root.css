@@ -13,8 +13,6 @@
   --reject-color: hsl(0, 100%, 60%);
 
   --quote-text-color: hsl(0, 0%, 53%);
-  /* --code-background-color: hsl(0, 3%, 19%); */
-  /* --code-text-color: hsl(50, 17%, 93%); */
 }
 
 :root[color-scheme^='light'] {
@@ -29,6 +27,8 @@
   --primary-color: hsl(220, 50%, 40%);
   --selection-color: hsl(220, 50%, 40%);
   --dim-opacity: 65%;
+  
+  --accessible-color: hsl(245, 100%, 19%);
 }
 
 :root[color-scheme^='dark'] {
@@ -43,5 +43,7 @@
   --primary-color: hsl(220, 53%, 58%);
   --selection-color: hsl(220, 50%, 40%);
   --dim-opacity: 50%;
+
+  --accessible-color: hsl(25, 100%, 67%);
 }
 

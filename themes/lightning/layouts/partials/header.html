@@ -1,4 +1,10 @@
+{{- $target := "#main-content" -}}
+{{- if and .IsPage (eq .Section "posts") -}}
+  {{- $target = "#blog-content" -}}
+{{- end -}}
+
 <div role="navigation" aria-label="Main">
+  <a href="{{ $target }}" class="skip">Skip to main content</a>
   <div class="nav-left">
     <a href="{{- absURL "" -}}" style="color: inherit;">{{- site.Title -}}</a>
     {{/* <a href="{{- absURL "" -}}"><img width="90px" style="padding:none;margin:none;"

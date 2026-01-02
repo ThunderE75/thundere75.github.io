@@ -283,6 +283,9 @@
   padding: 0 .6rem;
   border: 1px var(--dim-color) solid;
   border-radius: 15px;
+  font-weight: 700;
+  /* color: var(--body-background-color);
+  background-color: var(--primary-color); */
 }
 
 .tag:hover {
@@ -292,7 +295,6 @@
 .search-result {
   border-top: 1px var(--dim-color) solid;
 }
-
 
 .sharelinks {
   margin: 2rem 0 0 0;
