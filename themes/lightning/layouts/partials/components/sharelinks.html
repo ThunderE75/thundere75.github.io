@@ -35,7 +35,7 @@
     </div>
     {{- if site.Params.lightning.showReplyByMail -}}
     <div>
-        <a href="mailto:navneet.dubey750+blog@gmail.com
+        <a href="mailto:{{- site.Params.lightning.info.replyEmail -}}
             ?subject=Reply: {{ $title }}">
             <i class="fa-solid fa-reply"></i>
             <span>Reply</span>

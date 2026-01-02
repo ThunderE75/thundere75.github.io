@@ -57,6 +57,7 @@ enableEmoji = true
   companyName="KrikalSoft"
   companyURL="https://krikal.in/"
   copyrightStartYear=2025
+  replyEmail = "navneet.dubey750+blog@gmail.com"
 
 [params.lightning.home]
   showBio = true
