@@ -2,10 +2,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ printf "%s | %s" .Title site.Title }}{{ end }}</title>
-<meta property="article:author" content="{{ .Site.Params.lightning.info.authorFullName }}">
-<link rel="icon" href="/favicon.svg" sizes="any" type="image/svg+xml" />
 
-{{/* --- CUSTOM OG + TWITTER IMAGE LOGIC --- */}}
+<meta property="article:author" content="{{ .Site.Params.lightning.info.authorFullName }}">
+<meta name="author" content="{{ .Site.Params.lightning.info.authorFullName }}">
+<link rel="icon" href="/images/favicon.svg" sizes="any" type="image/svg+xml" />
+
+{{/* --- CUSTOM OG & TWITTER IMAGE LOGIC --- */}}
 {{ $image := "" }}
 {{ if .Params.image }}
     {{ $image = .Params.image }}
@@ -17,21 +19,35 @@
 <meta property="og:image" content="{{ $image }}">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
+
 <meta name="twitter:image" content="{{ $image }}">
 <meta name="twitter:card" content="summary_large_image">
 {{ end }}
-{{/* ---------------------------------------- */}}
 
-{{- template "_internal/opengraph.html" . -}}
-{{- template "_internal/twitter_cards.html" . -}}
+{{/* --- EXPLICIT OG & TWITTER METADATA --- */}}
+<meta property="og:title" content="{{ .Title }}">
+<meta property="og:description" content="{{ .Description | default .Site.Params.description }}">
 
-{{- /* Explicit OG URL, type for posts, and author meta for header */ -}}
+<meta name="twitter:title" content="{{ .Title }}">
+<meta name="twitter:description" content="{{ .Description | default .Site.Params.description }}">
+
 {{- if .Permalink }}
 <meta property="og:url" content="{{ .Permalink }}">
+<meta name="twitter:url" content="{{ .Permalink }}">
 {{- end }}
+
 {{- $ogType := cond (eq .Section "posts") "article" "website" -}}
 <meta property="og:type" content="{{ $ogType }}">
-<meta name="author" content="{{ .Site.Params.lightning.info.authorFullName }}">
+
+{{/* Optional Twitter account attribution */}}
+{{ with .Site.Params.twitterHandle }}
+<meta name="twitter:site" content="@{{ . }}">
+<meta name="twitter:creator" content="@{{ . }}">
+{{ end }}
+
+{{/* --- Hugo internal fallbacks --- */}}
+{{- template "_internal/opengraph.html" . -}}
+{{- template "_internal/twitter_cards.html" . -}}
 
 {{- partialCached "head/css.html" . -}}
 {{- partialCached "head/js.html" . -}}
