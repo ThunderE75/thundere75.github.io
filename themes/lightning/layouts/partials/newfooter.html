@@ -1,62 +1,59 @@
-<div class="new-footer">
-    <div class="footer-copyright">
-        © {{ site.Params.lightning.info.copyrightStartYear }} - {{ now.Year }}<a href="/socials">&emsp;{{
-            .Site.Params.lightning.info.authorFullName }}</a>
-    </div>
-    <div class="footer-content-license">
-        {{ i18n "footer_content_licensed_under" }}
-        <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC-NC-SA 4.0</a>
-    </div>
-    <div class="footer-tech-license">
-        {{ i18n "footer_tech_licensed_under" }}
-        <a href="https://github.com/ThunderE75/thundere75.github.io/blob/main/LICENSE" target="_blank">GNU GPLv3</a>
-    </div>
-    {{ if .Site.Params.lightning.footerCommitAndTime }}
-    <div class="deploy-commit footer-commit">
-        {{ $commit := or .Site.Params.deploy_commit (getenv "HUGO_PARAMS_DEPLOY_COMMIT") }}
-        {{ if $commit }}
-        <i class="fa-solid fa-code-commit" aria-hidden="true"></i>
-        <a href="https://github.com/ThunderE75/thundere75.github.io/commit/{{ $commit }}" target="_blank" rel="noopener"
-            title="{{ i18n " footer_view_deploy_commit" }}">
-            {{ slicestr $commit 0 7 }}
-        </a>
-        {{ else }}
-        <i class="fa-solid fa-asterisk" aria-hidden="true" title="{{ i18n " footer_local_build_title" }}"></i>
-        <span class="local-build" title="{{ i18n " footer_local_build_title" }}">{{ i18n "footer_local_build" }}</span>
-        {{ end }}
-    </div>
-    <div class="deploy-time footer-time">
-        {{ $deployTime := or .Site.Params.deploy_time (getenv "HUGO_PARAMS_DEPLOY_TIME") }}
-        {{ if $deployTime }}
-        <i class="fa-regular fa-clock"></i>
-        <time datetime="{{ $deployTime }}">
-            {{ $deployTime | time.Format "02 Jan 2006 15:04 UTC" }}
-        </time>
-        {{ else }}
-        <i class="fa-regular fa-clock"></i>
-        <span title="{{ i18n " footer_not_deployed_via_ci" }}">
-            {{ now | time.Format "02 Jan 2006 15:04 UTC" }}
-        </span>
-        {{ end }}
-    </div>
-    {{ end }}
-
-    {{ if .Site.Params.lightning.footerPoweredBy }}
-    <div class="footer-powered">
-        {{- $ThemeAnchor := .Site.Params.links.theme | printf "<a href=\"%s\" target=\"_blank\">Lightning</a>" -}}
-        {{- $HugoAnchor := .Site.Params.links.hugo | printf "<a href=\"%s\" target=\"_blank\">Hugo</a>" -}}
-        {{- i18n "footer" (dict "ThemeAnchor" $ThemeAnchor "HugoAnchor" $HugoAnchor) | safeHTML -}}
-    </div>
-    {{ end }}
-
-    {{ if .Site.Params.lightning.footerScrollToTop }}
-    <div class="footer-scroll-top">
-        <a href="#">
-            <i class="fa-solid fa-arrow-up"></i>
-            {{ i18n "scroll_top" }}
-            <i class="fa-solid fa-arrow-up"></i>
-        </a>
-    </div>
-    {{ end }}
-
+<div class="footer-copyright">
+    © {{ site.Params.lightning.info.copyrightStartYear }} - {{ now.Year }}<a href="/socials">&emsp;{{
+        .Site.Params.lightning.info.authorFullName }}</a>
 </div>
+<div class="footer-content-license">
+    {{ i18n "footer_content_licensed_under" }}
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC-NC-SA 4.0</a>
+</div>
+<div class="footer-tech-license">
+    {{ i18n "footer_tech_licensed_under" }}
+    <a href="https://github.com/ThunderE75/thundere75.github.io/blob/main/LICENSE" target="_blank">GNU GPLv3</a>
+</div>
+{{ if .Site.Params.lightning.footerCommitAndTime }}
+<div class="deploy-commit footer-commit">
+    {{ $commit := or .Site.Params.deploy_commit (getenv "HUGO_PARAMS_DEPLOY_COMMIT") }}
+    {{ if $commit }}
+    <i class="fa-solid fa-code-commit" aria-hidden="true"></i>
+    <a href="https://github.com/ThunderE75/thundere75.github.io/commit/{{ $commit }}" target="_blank" rel="noopener"
+        title="{{ i18n " footer_view_deploy_commit" }}">
+        {{ slicestr $commit 0 7 }}
+    </a>
+    {{ else }}
+    <i class="fa-solid fa-asterisk" aria-hidden="true" title="{{ i18n " footer_local_build_title" }}"></i>
+    <span class="local-build" title="{{ i18n " footer_local_build_title" }}">{{ i18n "footer_local_build" }}</span>
+    {{ end }}
+</div>
+<div class="deploy-time footer-time">
+    {{ $deployTime := or .Site.Params.deploy_time (getenv "HUGO_PARAMS_DEPLOY_TIME") }}
+    {{ if $deployTime }}
+    <i class="fa-regular fa-clock"></i>
+    <time datetime="{{ $deployTime }}">
+        {{ $deployTime | time.Format "02 Jan 2006 15:04 UTC" }}
+    </time>
+    {{ else }}
+    <i class="fa-regular fa-clock"></i>
+    <span title="{{ i18n " footer_not_deployed_via_ci" }}">
+        {{ now | time.Format "02 Jan 2006 15:04 UTC" }}
+    </span>
+    {{ end }}
+</div>
+{{ end }}
+
+{{ if .Site.Params.lightning.footerPoweredBy }}
+<div class="footer-powered">
+    {{- $ThemeAnchor := .Site.Params.links.theme | printf "<a href=\"%s\" target=\"_blank\">Lightning</a>" -}}
+    {{- $HugoAnchor := .Site.Params.links.hugo | printf "<a href=\"%s\" target=\"_blank\">Hugo</a>" -}}
+    {{- i18n "footer" (dict "ThemeAnchor" $ThemeAnchor "HugoAnchor" $HugoAnchor) | safeHTML -}}
+</div>
+{{ end }}
+
+{{ if .Site.Params.lightning.footerScrollToTop }}
+<div class="footer-scroll-top">
+    <a href="#">
+        <i class="fa-solid fa-arrow-up"></i>
+        {{ i18n "scroll_top" }}
+        <i class="fa-solid fa-arrow-up"></i>
+    </a>
+</div>
+{{ end }}

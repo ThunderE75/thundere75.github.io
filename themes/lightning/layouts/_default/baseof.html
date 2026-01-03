@@ -14,15 +14,14 @@
         <main id="main-content">
           {{- block "main" . -}}{{- end -}}
         </main>
-        {{/*  <footer id="main-footer">
-          {{- partial "footer.html" . -}}
-        </footer>  */}}
       </div>
       {{- if (and (default true .Params.lightning.sidePane) site.Params.lightning.sidePane) -}}
       {{- block "side" . -}}{{- end -}}
       {{- end -}}
     </div>
-    {{- partial "newfooter.html" . -}}
+    <footer class="new-footer">
+      {{- partial "newfooter.html" . -}}
+    </footer>
   </div>
 
   {{/* Global image lightbox overlay */}}
