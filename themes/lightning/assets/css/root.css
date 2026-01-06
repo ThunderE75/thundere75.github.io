@@ -30,6 +30,9 @@
   --accept-hover-color: hsl(131, 100%, 30%);
   --accept-background-color: hsl(132, 45%, 77%);
   --reject-color: hsl(0, 100%, 60%);
+  /* subtle grain overlay (white noise) */
+  --grain-image: urlurl("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 600'%3E%3Cfilter id='a'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23a)'/%3E%3C/svg%3E");
+  --grain-blend-mode: overlay;
 }
 
 :root[color-scheme^='dark'] {
@@ -50,5 +53,8 @@
   --accept-hover-color: hsl(131, 40%, 73%);
   --accept-background-color: hsl(131, 93%, 6%);
   --reject-color: hsl(0, 100%, 60%);
+  /* subtle grain overlay (dark noise) */
+  --grain-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'><filter id='g'><feTurbulence baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix type='saturate' values='0'/></filter><rect width='100' height='100' filter='url(%23g)' opacity='0.06' fill='%23000000'/></svg>");
+  --grain-blend-mode: overlay;
 }
 
