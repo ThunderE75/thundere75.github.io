@@ -1,5 +1,5 @@
 +++
-title = 'MPV Media Player Guide'
+title = 'MPV media player guide'
 date = '2025-10-02T19:43:38+05:30'
 image = "/images/posts/mpv/mpv_blog.jpg"
 featured = true

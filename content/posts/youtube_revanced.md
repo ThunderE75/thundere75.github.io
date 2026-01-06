@@ -1,5 +1,5 @@
 +++
-title = 'Youtube ReVanced Guide'
+title = 'Youtube ReVanced guide'
 date = '2025-12-29T20:12:00+05:30'
 image = "/images/posts/revanced/og_revanced.jpg"
 featured = true

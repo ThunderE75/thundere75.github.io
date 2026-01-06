@@ -1,6 +1,6 @@
 +++
 date = '2025-09-30T23:58:18+05:30'
-title = 'Remove Ubuntu Snap'
+title = 'Remove Ubuntu snap packages'
 tags= ['linux', 'guide']
 description = 'Step-by-step guide to remove Snap from Ubuntu safely and switch to apt/Flatpak.'
 +++

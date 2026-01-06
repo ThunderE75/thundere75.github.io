@@ -1,5 +1,5 @@
 +++
-title = 'How to remove UEFI Partition from Windows'
+title = 'How to remove UEFI partition from Windows'
 date = '2025-10-02T04:11:12+05:30'
 tags = ['windows', 'guide']
 description = 'Delete an unwanted EFI System Partition from Windows using Diskpart.'
