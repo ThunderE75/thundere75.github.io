@@ -556,3 +556,9 @@ details.callout summary:focus-visible {
   font-style: italic !important;
   font-size: 4rem !important;
 }
+
+@media (max-width: 768px) {
+  .blog-title{
+    font-size: 2rem !important;
+  }
+}
