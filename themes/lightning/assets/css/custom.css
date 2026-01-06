@@ -554,11 +554,11 @@ details.callout summary:focus-visible {
   font-family: "Radley", serif !important;
   font-weight: 500 !important;
   font-style: italic !important;
-  font-size: 4rem !important;
+  font-size: 4rem;
 }
 
 @media (max-width: 768px) {
   .blog-title{
-    font-size: 2rem !important;
+    font-size: 2rem;
   }
 }
