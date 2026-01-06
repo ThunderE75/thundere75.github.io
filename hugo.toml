@@ -69,6 +69,9 @@ enableEmoji = true
   hideRecentWhenFeatured = true
   countRecent = 5
   showSocialLinks=true
+  avalableToHire=true
+  avalableToHireText="Available for Work"
+  hireMeURL="mailto:navneet.dubey750+job@gmail.com"
 
 [params.lightning.side.home]
   sidePaneSticky = false

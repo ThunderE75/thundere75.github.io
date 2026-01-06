@@ -3,13 +3,23 @@
   {{- $target = "#blog-content" -}}
 {{- end -}}
 
-<div role="navigation" aria-label="Main">
+<div class="header-content" role="navigation" aria-label="Main">
   <a href="{{ $target }}" class="skip">Skip to main content</a>
   <div class="nav-left">
     <a href="{{- absURL "" -}}" style="color: inherit;">{{- site.Title -}}</a>
     {{/* <a href="{{- absURL "" -}}"><img width="90px" style="padding:none;margin:none;"
         src="{{- site.Data.lightning.content.home.banner | default " images/thunder_banner_dark.png" -}}" /></a> */}}
   </div>
+
+  {{- if site.Params.lightning.home.avalableToHire -}}
+  <div class="home-bio-hire-me">
+    <div class="avaliable-dot"></div>
+    <a href="{{- site.Params.lightning.home.hireMeURL | default " #" -}}" target="_blank" rel="noopener noreferrer">
+      {{- site.Params.lightning.home.avalableToHireText | default "Available for Work" -}}
+    </a>
+  </div>
+  {{- end -}}
+
   <div class="nav-right">
     <div style="position:absolute;width:0px;height:0px;">
       <div id="nav-dropdown-menu" class="hidden" href="#">

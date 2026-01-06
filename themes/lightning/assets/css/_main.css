@@ -73,6 +73,14 @@ aside.side-sticky {
 header#main-header {
   border-bottom: 1px var(--dim-color) solid;
 }
+
+.header-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
 header .skip{ 
   color: var(--accessible-color);
   position: absolute;

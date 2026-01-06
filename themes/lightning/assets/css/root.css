@@ -9,9 +9,6 @@
   --font-weight-summary: 500;
 
   --dim-color: hsla(0, 0%, 53%, 0.267);
-  --accept-color: hsl(131, 100%, 62%);
-  --reject-color: hsl(0, 100%, 60%);
-
   --quote-text-color: hsl(0, 0%, 53%);
 }
 
@@ -29,6 +26,10 @@
   --dim-opacity: 65%;
   
   --accessible-color: hsl(245, 100%, 19%);
+  --accept-color: hsl(131, 100%, 23%);
+  --accept-hover-color: hsl(131, 100%, 30%);
+  --accept-background-color: hsl(132, 45%, 77%);
+  --reject-color: hsl(0, 100%, 60%);
 }
 
 :root[color-scheme^='dark'] {
@@ -45,5 +46,9 @@
   --dim-opacity: 50%;
 
   --accessible-color: hsl(25, 100%, 67%);
+  --accept-color: hsl(131, 100%, 73%);
+  --accept-hover-color: hsl(131, 40%, 73%);
+  --accept-background-color: hsl(131, 93%, 6%);
+  --reject-color: hsl(0, 100%, 60%);
 }
 

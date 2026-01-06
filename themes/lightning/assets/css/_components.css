@@ -321,3 +321,33 @@
     gap: 0.4rem;
   }
 }
+
+.home-bio-hire-me {
+  margin: 0.2rem 0 0 0;
+  padding: 0.2rem 0.8rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border: 2px solid var(--dim-color);
+  border-radius: 16px;
+  background-color: var(--accept-background-color);
+}
+.home-bio-hire-me a {
+  font-size: 0.9rem;
+  font-weight: 600;
+  /* color: var(--primary-color); */
+  color: var(--accept-color);
+  text-decoration: none;
+}
+.home-bio-hire-me a:hover {
+  color: var(--accept-hover-color);
+}
+
+.avaliable-dot{
+  height: 8px;
+  width: 8px;
+  background-color: var(--accept-color);
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 8px;
+}
