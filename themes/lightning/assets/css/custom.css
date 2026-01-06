@@ -549,3 +549,10 @@ details.callout summary:focus-visible {
     margin: 0 !important;
   }
 }
+
+.blog-title{
+  font-family: "Radley", serif !important;
+  font-weight: 500 !important;
+  font-style: italic !important;
+  font-size: 4rem !important;
+}

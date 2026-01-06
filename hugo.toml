@@ -45,6 +45,7 @@ enableEmoji = true
   footerCommitAndTime=true
   footerScrollToTop=true
   footerPoweredBy=false
+  fancyTitles=true
 
 [params.lightning.info]
   authorName="Navneet"
