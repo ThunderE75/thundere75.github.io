@@ -1,0 +1,65 @@
+
+/* Giscus custom theme based on the site's root CSS variables
+	 - Light mode values mirror :root[color-scheme^='light']
+	 - Dark mode values mirror :root[color-scheme^='dark']
+*/
+
+main {
+	/* Syntax colors (prettylights) */
+	--color-prettylights-syntax-comment: hsl(0, 0%, 53%);
+	--color-prettylights-syntax-constant: hsl(220, 50%, 40%);
+	--color-prettylights-syntax-entity: hsl(245, 100%, 19%);
+	--color-prettylights-syntax-keyword: hsl(220, 50%, 40%);
+	--color-prettylights-syntax-string: hsl(131, 100%, 23%);
+	--color-prettylights-syntax-variable: hsl(220, 50%, 40%);
+
+	/* Core UI */
+	--color-fg-default: hsl(0, 0%, 13%);
+	--color-fg-muted: hsl(0, 0%, 53%);
+	--color-canvas-default: hsl(50, 17%, 93%);
+	--color-border-default: hsla(0, 0%, 53%, 0.267);
+	--color-btn-text: hsl(0, 0%, 13%);
+	--color-btn-bg: hsl(0, 0%, 90%);
+	--color-accent-fg: hsl(220, 50%, 40%);
+	--color-success-fg: hsl(131, 100%, 23%);
+	--color-danger-fg: hsl(0, 100%, 60%);
+
+	/* Buttons / controls */
+		--color-btn-primary-text: var(--body-text-color);
+		--color-btn-primary-bg: var(--primary-color);
+
+	/* Misc */
+	--color-primer-shadow-inset: 0 0 transparent;
+}
+
+@media (prefers-color-scheme: dark) {
+	main {
+		--color-prettylights-syntax-comment: hsl(50, 17%, 93%);
+		--color-prettylights-syntax-constant: hsl(220, 53%, 58%);
+		--color-prettylights-syntax-entity: hsl(25, 100%, 67%);
+		--color-prettylights-syntax-keyword: hsl(220, 53%, 58%);
+		--color-prettylights-syntax-string: hsl(131, 100%, 73%);
+		--color-prettylights-syntax-variable: hsl(220, 53%, 58%);
+
+		--color-fg-default: hsl(50, 17%, 93%);
+		--color-fg-muted: hsl(50, 17%, 80%);
+		--color-canvas-default: hsl(0, 0%, 7%);
+		--color-border-default: hsla(0, 0%, 53%, 0.267);
+		--color-btn-text: hsl(50, 17%, 93%);
+		--color-btn-bg: hsl(0, 3%, 19%);
+		--color-accent-fg: hsl(220, 53%, 58%);
+		--color-success-fg: hsl(131, 100%, 73%);
+		--color-danger-fg: hsl(229, 35%, 65%);
+
+		--color-btn-primary-text: var(--body-text-color);
+		--color-btn-primary-bg: var(--primary-color);
+	}
+}
+
+/* Small tweaks for giscus elements */
+.gsc-header { color: var(--color-fg-muted); }
+.gsc-comment { color: var(--color-fg-default); }
+.gsc-comment-username { color: var(--color-accent-fg); font-weight: 600; }
+.gsc-comment-box { background: var(--color-canvas-default); border: 1px solid var(--color-border-default); }
+.gsc-reaction-button { color: var(--color-btn-text); background: var(--color-btn-bg); }
+
