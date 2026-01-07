@@ -29,6 +29,11 @@
 {{- if site.Params.lightning.showSharelinks -}}
   {{- partial "components/sharelinks" . -}}
 {{- end -}}
+{{- if site.Params.lightning.enableComments -}}
+  <section class="page-section" id="comments-section" aria-label="Comments Section">
+    {{- partial "components/giscus.html" . -}}
+  </section>
+{{- end -}}
 {{- end -}}
 
 

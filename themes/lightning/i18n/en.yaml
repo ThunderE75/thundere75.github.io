@@ -48,3 +48,9 @@ details_read_time: minutes read
 side_table_of_contents: Table Of Contents
 side_attachments: Attachments
 side_related: Related
+
+
+# Components
+comments_title: Comments
+view_comments: View comments
+hide_comments: Hide comments
