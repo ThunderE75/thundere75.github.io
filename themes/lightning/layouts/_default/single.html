@@ -1,7 +1,7 @@
 {{- define "main" -}}
 <div class="single-header">
   {{- partial "components/breadcrumbs.html" . -}}
-  {{- if site.Params.lightning.fancyTitles -}}
+  {{- if site.Params.lightning.blog.fancyTitles -}}
     <h1 class="blog-title">{{- partial "title.html" . -}}</h1>
   {{ else }}
     <h1>{{- partial "title.html" . -}}</h1>
@@ -14,7 +14,6 @@
   {{/* <span class="dim">({{- div (len .RawContent) 1096 }} - {{ div (len .RawContent) 860 }} {{ i18n
     "details_read_time" -}})</span> */}}
   {{- partial "components/tags.html" . -}}
-  
 </div>
 <section class="page-section" id="blog-content" aria-label="Blog Post Content">
   {{/* for OG Cover Image */}}
@@ -26,10 +25,10 @@
   {{- .Content -}}
 </section>
 
-{{- if site.Params.lightning.showSharelinks -}}
+{{- if site.Params.lightning.blog.showSharelinks -}}
   {{- partial "components/sharelinks" . -}}
 {{- end -}}
-{{- if site.Params.lightning.enableComments -}}
+{{- if site.Params.lightning.blog.enableComments -}}
   <section class="page-section" id="comments-section" aria-label="Comments Section">
     {{- partial "components/giscus.html" . -}}
   </section>

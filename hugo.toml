@@ -38,15 +38,18 @@ enableEmoji = true
   deploy_time   = ""
 
 [params.lightning]
-  sidePane = true
-  showSharelinks = true
-  showReplyByMail = true
   countPageItems = 7
   footerCommitAndTime=true
   footerScrollToTop=true
   footerPoweredBy=false
-  fancyTitles=true
-  enableComments=true
+
+[params.lightning.blog]
+    sidePane = true
+    showSummarizeByAi=true
+    fancyTitles=true
+    enableComments=true
+    showSharelinks = true
+    showReplyByMail = true
 
 [params.lightning.info]
   authorName="Navneet"
