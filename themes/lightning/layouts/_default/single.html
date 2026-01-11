@@ -2,9 +2,9 @@
 <div class="single-header">
   {{- partial "components/breadcrumbs.html" . -}}
   {{- if site.Params.lightning.blog.fancyTitles -}}
-    <h1 class="blog-title">{{- partial "title.html" . -}}</h1>
+  <h1 class="blog-title">{{- partial "title.html" . -}}</h1>
   {{ else }}
-    <h1>{{- partial "title.html" . -}}</h1>
+  <h1>{{- partial "title.html" . -}}</h1>
   {{- end -}}
   {{- $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" -}}
   {{- $dateHuman := .Date | time.Format ":date_long" -}}
@@ -15,7 +15,9 @@
     "details_read_time" -}})</span> */}}
   {{- partial "components/tags.html" . -}}
 </div>
-{{- partial "components/summarize" . -}}
+{{- if site.Params.lightning.blog.showSummarizeByAi -}}
+  {{- partial "components/summarize" . -}}
+{{- end -}}
 <section class="page-section" id="blog-content" aria-label="Blog Post Content">
   {{/* for OG Cover Image */}}
   {{/* {{ if .Params.image }}
@@ -27,12 +29,12 @@
 </section>
 
 {{- if site.Params.lightning.blog.showSharelinks -}}
-  {{- partial "components/sharelinks" . -}}
+{{- partial "components/sharelinks" . -}}
 {{- end -}}
 {{- if site.Params.lightning.blog.enableComments -}}
-  <section class="page-section" id="comments-section" aria-label="Comments Section">
-    {{- partial "components/giscus.html" . -}}
-  </section>
+<section class="page-section" id="comments-section" aria-label="Comments Section">
+  {{- partial "components/giscus.html" . -}}
+</section>
 {{- end -}}
 {{- end -}}
 
