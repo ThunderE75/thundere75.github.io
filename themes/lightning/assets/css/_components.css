@@ -351,3 +351,34 @@
   display: inline-block;
   margin-right: 8px;
 }
+
+.summarize-container{
+  margin-top: 0.7rem;
+  border-left: 4px solid var(--primary-color);
+  padding: 0.3rem 0rem 0.3rem 0.8rem;
+  background-color: hsl(from var(--primary-color) h s l/0.04);
+  border-radius: 8px;
+}
+
+.summarize-links {
+  display: inline-flex;
+  align-items: center;     /* vertical alignment */
+  gap: 0.5rem;
+}
+
+.summarize-label {
+  white-space: nowrap;
+}
+
+.ai-icons {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+.ai-icons svg {
+  width: 1.2em;
+  height: 1.2em;
+  fill: var(--primary-color);
+}

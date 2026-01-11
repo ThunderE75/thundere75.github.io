@@ -45,7 +45,7 @@ enableEmoji = true
 
 [params.lightning.blog]
     sidePane = true
-    showSummarizeByAi=true
+    showSummarizeByAi=false
     fancyTitles=true
     enableComments=true
     showSharelinks = true
