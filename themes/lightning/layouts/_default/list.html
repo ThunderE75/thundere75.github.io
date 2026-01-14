@@ -1,5 +1,8 @@
 {{- define "main" -}}
 <h1>{{- partial "title.html" . -}}</h1>
+
+{{- partial "search_bar.html" }}
+
 {{- .Content -}}
 {{- $visible := where .Pages "Params.indexable" "ne" false -}}
 {{- $pages := (.Paginate ($visible.GroupByDate "2006") site.Params.lightning.countPageItems) -}}

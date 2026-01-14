@@ -26,7 +26,7 @@
       <span style="font-size:0.85em; color:#666;">
         (Image credit: 
         {{- if $creditURL -}}
-          <a href="{{ $creditURL }}" target="_blank" rel="noopener noreferrer" style="color:inherit; text-decoration:underline;">
+          <a href="{{ $creditURL }}" target="_blank" rel="noopener noreferrer" loading="lazy" style="color:inherit; text-decoration:underline;">
             {{ $credit }}
           </a>
         {{- else -}}

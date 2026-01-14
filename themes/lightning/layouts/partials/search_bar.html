@@ -1,7 +1,7 @@
 <form onsubmit="searchBarSubmit(event)">
   <div class="search-bar">
     {{- partial "svg/search.svg" -}}
-    <input id="searchInput" name="q" type="text" placeholder="{{- i18n " search_placeholder" -}}" />
+    <input id="searchInput" aria-label="search-bar" name="q" type="text" placeholder="{{- i18n " search_placeholder" -}}" />
   </div>
 </form>
 
