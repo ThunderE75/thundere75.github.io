@@ -6,7 +6,7 @@ featured = true
 tags = ['windows', 'guide', 'FOSS']
 description = 'How I customize MPV on Windows with scripts, keybinds, and UI tweaks.'
 +++
- This guide demonstrates how i setup my MPV will all the Configs, Scripts & Keybindings. 
+This guide demonstrates how i setup my MPV will all the Configs, Scripts & Keybindings. 
 
  {{< jumpto src="#instructions-windows" label="Skip to Instructions" >}}
 
