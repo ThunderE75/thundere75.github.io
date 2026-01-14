@@ -3,3 +3,4 @@ content/template.md
 public
 content/draft
 .ignore
+.hugo_build.lock
