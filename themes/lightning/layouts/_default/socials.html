@@ -1,0 +1,27 @@
+{{- $socials := .Params.social -}}
+{{- if not $socials -}}
+  {{- $socials = site.Params.social -}}
+{{- end -}}
+
+{{- if $socials -}}
+<section class="page-section socials-page" aria-label="All social links">
+  <h1 class="page-title">{{ i18n "socials_title" | default "Socials" }}</h1>
+  <div class="socials-list">
+    {{- range sort $socials "weight" -}}
+      <a class="social-item" href="{{ .url }}" rel="me noopener noreferrer" target="_blank" title="{{ .name }}">
+        {{- with .icon -}}
+          {{- $ic := . -}}
+          {{- if or (strings.HasSuffix $ic ".svg") (strings.Contains $ic "/") -}}
+            <img src="{{ $ic }}" alt="{{ .name }}" class="social-icon-img" loading="lazy" />
+          {{- else -}}
+            {{- partial (printf "svg/brands/%s.svg" $ic) . -}}
+          {{- end -}}
+        {{- else -}}
+          <span class="social-icon"></span>
+        {{- end -}}
+        <span class="social-name">{{ .name }}</span>
+      </a>
+    {{- end -}}
+  </div>
+</section>
+{{- end -}}

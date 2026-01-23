@@ -55,6 +55,7 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    scale: 80%;
 }
 
 .socials-link {
@@ -66,4 +67,15 @@
 
 .socials-link i[aria-hidden="true"] {
     text-decoration: none;
+}
+
+.socials-link svg {
+    width: 2em;
+    height: 2em;
+    display: block;
+    color: var(--primary-color);
+}
+
+.socials-link svg:hover {
+    color: var(--primary-color-dark);
 }

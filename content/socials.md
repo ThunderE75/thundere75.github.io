@@ -11,40 +11,38 @@ alias = "Thunder"
 
 [[params.social]]
   name = "Github: ThunderE75"
-  icon = "fa-brands fa-github fa-2x"
+  icon = "svg/brands/github.svg"
   url = "https://github.com/ThunderE75"
 
 [[params.social]]
   name = "Linkedin: navneet-prakash-dubey"
-  icon = "fa-brands fa-linkedin-in fa-2x"
+  icon = "svg/brands/linkedin.svg"
   url = "https://www.linkedin.com/in/navneet-prakash-dubey/"
 
 [[params.social]]
   name = "Email: navneetprakashdubey@gmail.com"
-  icon = "fa-solid fa-envelope fa-2x"
+  icon = "svg/mail.svg"
   url = "mailto:navneetprakashdubey@gmail.com"
 
 [[params.social]]
   name = "Bluesky: thunder75.bsky.social"
-  icon = "fa-brands fa-bluesky fa-2x"
+  icon = "svg/brands/bluesky.svg"
   url = "https://bsky.app/profile/thunder75.bsky.social"
 
 [[params.social]]
   name = "Mastodon: @Thunder75"
-  icon = "fa-brands fa-mastodon fa-2x"
+  icon = "svg/brands/mastodon.svg"
   url = "https://mastodon.social/@Thunder75"
 
 [[params.social]]
   name = "Twitter: @navneet_dubey_"
-  icon = "fa-brands fa-x-twitter fa-2x"
+  icon = "svg/brands/x.svg"
   url = "https://x.com/navneet_dubey_"
 
 [[params.social]]
   name = "Leetcode: u/ThunderE75"
-  icon = "fa-solid fa-code fa-2x"
+  icon = "svg/brands/leetcode.svg"
   url = "https://leetcode.com/u/ThunderE75/"
-
-
 +++
 
 <!-- [[params.social]]

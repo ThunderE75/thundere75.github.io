@@ -2,17 +2,20 @@
 <div class="home-bio-box">
   <div class="home-bio" >
     <h1 style="margin: 0;">Hi, i'm&nbsp{{- site.Params.lightning.info.authorName -}} 👋🏼</h1>
-    <p style="margin: 0; text-wrap:nowrap;">{{- site.Params.lightning.info.subHeading -}}&nbsp; <br>
-      {{- if site.Params.lightning.info.countryEmoji -}}
-      <span style="text-wrap:nowrap;">
-        {{- site.Params.lightning.info.subHeadingLocation -}}&nbsp;
-      </span>
+    <p style="margin: 0; white-space: nowrap;">
+      {{- site.Params.lightning.info.subHeading -}}
+    </p>
+    {{- if site.Params.lightning.info.countryEmoji -}}
+    <p style="margin: 0; white-space: nowrap;">
+      <span>{{- site.Params.lightning.info.subHeadingLocation -}}&nbsp;</span>
       <span style="font-family: Twemoji Country Flags;">
         {{- site.Params.lightning.info.countryEmoji -}}
       </span>
-      {{- end -}}
-      {{- if site.Params.lightning.info.currentOccupation -}}
-    <p style="margin: 0;">{{- site.Params.lightning.info.currentOccupation -}}&nbsp;<a
+    </p>
+    {{- end -}}
+    {{- if site.Params.lightning.info.currentOccupation -}}
+    <p style="margin: 0;">
+      {{- site.Params.lightning.info.currentOccupation -}}&nbsp;<a
         href="{{- site.Params.lightning.info.companyURL -}}" target="_blank" rel="noopener noreferrer">
         {{- site.Params.lightning.info.companyName -}}</a>
     </p>

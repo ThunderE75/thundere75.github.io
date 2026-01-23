@@ -1,31 +1,43 @@
 {{- define "main" -}}
 <div class="socials-main">
-
-    <section class="page-section socials-page">
-        <div>
-            <img src="/images/avatar.jpg" alt="Avatar" class="socials-avatar" loading="lazy" />
-        </div>
+  <section class="page-section socials-page">
+    <div>
+      <img
+        src="/images/avatar.jpg"
+        alt="Avatar"
+        class="socials-avatar"
+        loading="lazy"
+      />
+    </div>
     {{- with .Params.author -}}
     <div class="socials-author">
-        <div class="socials-author-name">{{ . }}</div>
-        {{- with $.Params.alias -}}
-        <div class="socials-alias">{{ . }}</div>
-        {{- end -}}
+      <div class="socials-author-name">{{ . }}</div>
+      {{- with $.Params.alias -}}
+      <div class="socials-alias">{{ . }}</div>
+      {{- end -}}
     </div>
     {{- end -}}
-    
+
     {{- with .Params.social -}}
     <nav aria-label="Social links" class="socials-links">
-        {{- range sort . "weight" -}}
-        <a href="{{ .url }}" rel="me noopener noreferrer" target="_blank" aria-label="{{ .name }}" title="{{ .name }}"
-        class="socials-link fancy-icon">
-            {{- with .icon -}}<i class="{{ . }}" aria-hidden="true"></i>{{- end -}}
-        </a>
+      {{- range sort . "weight" -}}
+      <a
+        href="{{ .url }}"
+        rel="me noopener noreferrer"
+        target="_blank"
+        aria-label="{{ .name }}"
+        title="{{ .name }}"
+        class="socials-link fancy-icon"
+      >
+        {{- with .icon -}}
+          {{- partial . $ -}}
         {{- end -}}
+      </a>
+      {{- end -}}
     </nav>
     {{- end -}}
-</section>
+
+  </section>
 </div>
 {{- end -}}
-
 {{- define "side" -}}{{- end -}}
