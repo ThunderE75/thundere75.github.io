@@ -5,11 +5,15 @@
   </div>
 </form>
 
+{{- $searchURL := "/search/" | relURL -}}
+{{- with site.GetPage "/search" -}}
+  {{- $searchURL = .RelPermalink -}}
+{{- end -}}
 <script>
   function searchBarSubmit(event) {
     event.preventDefault();
     const value = event.target.elements['q'] ? event.target.elements['q'].value : (document.getElementById('searchInput')?.value || '');
-    const relativeUrl = `{{- absURL site.Params.lightning.searchPath -}}/?q=${encodeURIComponent(value)}`;
+    const relativeUrl = `{{- $searchURL -}}?q=${encodeURIComponent(value)}`;
     window.location.href = relativeUrl;
   }
 </script>

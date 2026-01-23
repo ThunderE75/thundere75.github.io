@@ -1,7 +1,9 @@
 {{- define "main" -}}
 <h1>{{- partial "title.html" . -}}</h1>
 
-{{- partial "search_bar.html" }}
+{{- if ne .Section "search" -}}
+  {{- partial "search_bar.html" . -}}
+{{- end -}}
 
 {{- .Content -}}
 {{- $visible := where .Pages "Params.indexable" "ne" false -}}
